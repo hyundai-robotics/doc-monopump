@@ -6,117 +6,117 @@
 	},
 	{
 		"link": "1-intro/README.md",
-		"char_ofs": 263,
-		"byte_ofs": 524
+		"char_ofs": 267,
+		"byte_ofs": 528
 	},
 	{
 		"link": "1-intro/1-preparatory-information.md",
-		"char_ofs": 272,
-		"byte_ofs": 542
+		"char_ofs": 276,
+		"byte_ofs": 546
 	},
 	{
 		"link": "1-intro/2-monopump-func.md",
-		"char_ofs": 372,
-		"byte_ofs": 757
+		"char_ofs": 376,
+		"byte_ofs": 761
 	},
 	{
 		"link": "2-basic-setting/README.md",
-		"char_ofs": 672,
-		"byte_ofs": 1277
+		"char_ofs": 676,
+		"byte_ofs": 1281
 	},
 	{
 		"link": "2-basic-setting/1-add-axis-parameter.md",
-		"char_ofs": 684,
-		"byte_ofs": 1302
+		"char_ofs": 688,
+		"byte_ofs": 1306
 	},
 	{
 		"link": "2-basic-setting/2-sealer-gun-setting.md",
-		"char_ofs": 992,
-		"byte_ofs": 1980
+		"char_ofs": 996,
+		"byte_ofs": 1984
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/README.md",
-		"char_ofs": 1252,
-		"byte_ofs": 2520
+		"char_ofs": 1256,
+		"byte_ofs": 2524
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/1-general.md",
-		"char_ofs": 1268,
-		"byte_ofs": 2555
+		"char_ofs": 1272,
+		"byte_ofs": 2559
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/2-flow-rate-tunning.md",
-		"char_ofs": 1398,
-		"byte_ofs": 2815
+		"char_ofs": 1402,
+		"byte_ofs": 2819
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/3-input-signal-assign.md",
-		"char_ofs": 1867,
-		"byte_ofs": 3718
+		"char_ofs": 1871,
+		"byte_ofs": 3722
 	},
 	{
 		"link": "3-command-condition/README.md",
-		"char_ofs": 2331,
-		"byte_ofs": 4670
+		"char_ofs": 2335,
+		"byte_ofs": 4674
 	},
 	{
 		"link": "3-command-condition/1-command/README.md",
-		"char_ofs": 2383,
-		"byte_ofs": 4797
+		"char_ofs": 2387,
+		"byte_ofs": 4801
 	},
 	{
 		"link": "3-command-condition/1-command/1-msealer-on.md",
-		"char_ofs": 2516,
-		"byte_ofs": 5041
+		"char_ofs": 2520,
+		"byte_ofs": 5045
 	},
 	{
 		"link": "3-command-condition/1-command/2-msealer-off.md",
-		"char_ofs": 4100,
-		"byte_ofs": 7673
+		"char_ofs": 4104,
+		"byte_ofs": 7677
 	},
 	{
 		"link": "3-command-condition/2-condition/README.md",
-		"char_ofs": 5231,
-		"byte_ofs": 9440
+		"char_ofs": 5235,
+		"byte_ofs": 9444
 	},
 	{
 		"link": "3-command-condition/2-condition/1-msealer-on.md",
-		"char_ofs": 5356,
-		"byte_ofs": 9714
+		"char_ofs": 5360,
+		"byte_ofs": 9718
 	},
 	{
 		"link": "3-command-condition/2-condition/2-msealer-off.md",
-		"char_ofs": 5840,
-		"byte_ofs": 10707
+		"char_ofs": 5844,
+		"byte_ofs": 10711
 	},
 	{
 		"link": "4-monitoring/README.md",
-		"char_ofs": 6102,
-		"byte_ofs": 11228
+		"char_ofs": 6106,
+		"byte_ofs": 11232
 	},
 	{
 		"link": "4-monitoring/1-sealing-status.md",
-		"char_ofs": 6113,
-		"byte_ofs": 11252
+		"char_ofs": 6117,
+		"byte_ofs": 11256
 	},
 	{
 		"link": "5-etc/README.md",
-		"char_ofs": 6379,
-		"byte_ofs": 11780
+		"char_ofs": 6383,
+		"byte_ofs": 11784
 	},
 	{
 		"link": "5-etc/1-stop-restart.md",
-		"char_ofs": 6387,
-		"byte_ofs": 11796
+		"char_ofs": 6391,
+		"byte_ofs": 11800
 	},
 	{
 		"link": "5-etc/2-manual-oper.md",
-		"char_ofs": 6592,
-		"byte_ofs": 12242
+		"char_ofs": 6596,
+		"byte_ofs": 12246
 	},
 	{
 		"link": "5-etc/3-license-key.md",
-		"char_ofs": 6674,
-		"byte_ofs": 12431
+		"char_ofs": 6678,
+		"byte_ofs": 12435
 	}
 ]
