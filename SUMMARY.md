@@ -11,6 +11,7 @@
     * [2.3.1 일반](2-basic-setting/3-monopump-setup/1-general.md)
     * [2.3.2 토출비 튜닝](2-basic-setting/3-monopump-setup/2-flow-rate-tunning.md)
     * [2.3.3 입력 신호 할당](2-basic-setting/3-monopump-setup/3-input-signal-assign.md)
+    * [2.3.4 출력 신호 할당](2-basic-setting/3-monopump-setup/4-output-signal-assign.md)
 * [3. 명령문과 실러조건](3-command-condition/README.md)
   * [3.1 명령문](3-command-condition/1-command/README.md)
     * [3.1.1 토출 시작 (m_seler on)](3-command-condition/1-command/1-msealer-on.md)
@@ -22,6 +23,8 @@
   * [4.1 실링 상태](4-monitoring/1-sealing-status.md)
 * [5. 기타](5-etc/README.md)
   * [5.1 실러 on구간 정지/재기동](5-etc/1-stop-restart.md)
-  * [5.2 수동모드에서 동작](5-etc/2-manual-oper.md)
+  * [5.2 수동 운전(R371)](5-etc/2-manual-oper.md)
   * [5.3 라이선스키 등록](5-etc/3-license-key.md)
+  * [5.4 시스템 변수](5-etc/4-system-var.md)
+  * [5.5 토출량 이력확인](5-etc/5-flow-amount-log.md)
 

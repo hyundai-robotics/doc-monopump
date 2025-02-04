@@ -46,77 +46,92 @@
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/2-flow-rate-tunning.md",
-		"char_ofs": 1402,
-		"byte_ofs": 2819
+		"char_ofs": 1430,
+		"byte_ofs": 2884
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/3-input-signal-assign.md",
-		"char_ofs": 1871,
-		"byte_ofs": 3722
+		"char_ofs": 1899,
+		"byte_ofs": 3787
+	},
+	{
+		"link": "2-basic-setting/3-monopump-setup/4-output-signal-assign.md",
+		"char_ofs": 2718,
+		"byte_ofs": 5478
 	},
 	{
 		"link": "3-command-condition/README.md",
-		"char_ofs": 2335,
-		"byte_ofs": 4674
+		"char_ofs": 3111,
+		"byte_ofs": 6303
 	},
 	{
 		"link": "3-command-condition/1-command/README.md",
-		"char_ofs": 2387,
-		"byte_ofs": 4801
+		"char_ofs": 3163,
+		"byte_ofs": 6430
 	},
 	{
 		"link": "3-command-condition/1-command/1-msealer-on.md",
-		"char_ofs": 2520,
-		"byte_ofs": 5045
+		"char_ofs": 3401,
+		"byte_ofs": 6869
 	},
 	{
 		"link": "3-command-condition/1-command/2-msealer-off.md",
-		"char_ofs": 4104,
-		"byte_ofs": 7677
+		"char_ofs": 4985,
+		"byte_ofs": 9501
 	},
 	{
 		"link": "3-command-condition/2-condition/README.md",
-		"char_ofs": 5235,
-		"byte_ofs": 9444
+		"char_ofs": 6116,
+		"byte_ofs": 11268
 	},
 	{
 		"link": "3-command-condition/2-condition/1-msealer-on.md",
-		"char_ofs": 5360,
-		"byte_ofs": 9718
+		"char_ofs": 6241,
+		"byte_ofs": 11542
 	},
 	{
 		"link": "3-command-condition/2-condition/2-msealer-off.md",
-		"char_ofs": 5844,
-		"byte_ofs": 10711
+		"char_ofs": 6725,
+		"byte_ofs": 12535
 	},
 	{
 		"link": "4-monitoring/README.md",
-		"char_ofs": 6106,
-		"byte_ofs": 11232
+		"char_ofs": 7047,
+		"byte_ofs": 13204
 	},
 	{
 		"link": "4-monitoring/1-sealing-status.md",
-		"char_ofs": 6117,
-		"byte_ofs": 11256
+		"char_ofs": 7058,
+		"byte_ofs": 13228
 	},
 	{
 		"link": "5-etc/README.md",
-		"char_ofs": 6383,
-		"byte_ofs": 11784
+		"char_ofs": 7356,
+		"byte_ofs": 13831
 	},
 	{
 		"link": "5-etc/1-stop-restart.md",
-		"char_ofs": 6391,
-		"byte_ofs": 11800
+		"char_ofs": 7364,
+		"byte_ofs": 13847
 	},
 	{
 		"link": "5-etc/2-manual-oper.md",
-		"char_ofs": 6596,
-		"byte_ofs": 12246
+		"char_ofs": 7569,
+		"byte_ofs": 14293
 	},
 	{
 		"link": "5-etc/3-license-key.md",
-		"char_ofs": 6678,
-		"byte_ofs": 12435
+		"char_ofs": 8117,
+		"byte_ofs": 15382
+	},
+	{
+		"link": "5-etc/4-system-var.md",
+		"char_ofs": 8219,
+		"byte_ofs": 15592
+	},
+	{
+		"link": "5-etc/5-flow-amount-log.md",
+		"char_ofs": 8835,
+		"byte_ofs": 16354
 	}
 ]
