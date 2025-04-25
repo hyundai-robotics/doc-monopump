@@ -3,7 +3,7 @@
 *   <mark style="color:green;">**_sealing.flow_amount (토출량)**</mark>
 
     ### 설명
-        토출을 시작부터 계측된 토출량을 얻기위해 사용합니다.
+        토출 시작부터 계측된 토출량을 얻기위해 사용합니다.
 
     ### 사용 예
     ```python

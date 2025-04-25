@@ -56,82 +56,82 @@
 	},
 	{
 		"link": "2-basic-setting/3-monopump-setup/4-output-signal-assign.md",
-		"char_ofs": 2718,
-		"byte_ofs": 5478
+		"char_ofs": 2738,
+		"byte_ofs": 5500
 	},
 	{
 		"link": "3-command-condition/README.md",
-		"char_ofs": 3111,
-		"byte_ofs": 6303
+		"char_ofs": 3149,
+		"byte_ofs": 6344
 	},
 	{
 		"link": "3-command-condition/1-command/README.md",
-		"char_ofs": 3163,
-		"byte_ofs": 6430
+		"char_ofs": 3201,
+		"byte_ofs": 6471
 	},
 	{
 		"link": "3-command-condition/1-command/1-msealer-on.md",
-		"char_ofs": 3401,
-		"byte_ofs": 6869
+		"char_ofs": 3439,
+		"byte_ofs": 6910
 	},
 	{
 		"link": "3-command-condition/1-command/2-msealer-off.md",
-		"char_ofs": 4985,
-		"byte_ofs": 9501
+		"char_ofs": 5023,
+		"byte_ofs": 9542
 	},
 	{
 		"link": "3-command-condition/2-condition/README.md",
-		"char_ofs": 6116,
-		"byte_ofs": 11268
+		"char_ofs": 6154,
+		"byte_ofs": 11309
 	},
 	{
 		"link": "3-command-condition/2-condition/1-msealer-on.md",
-		"char_ofs": 6241,
-		"byte_ofs": 11542
+		"char_ofs": 6279,
+		"byte_ofs": 11583
 	},
 	{
 		"link": "3-command-condition/2-condition/2-msealer-off.md",
-		"char_ofs": 6725,
-		"byte_ofs": 12535
+		"char_ofs": 6763,
+		"byte_ofs": 12576
 	},
 	{
 		"link": "4-monitoring/README.md",
-		"char_ofs": 7047,
-		"byte_ofs": 13204
+		"char_ofs": 7085,
+		"byte_ofs": 13245
 	},
 	{
 		"link": "4-monitoring/1-sealing-status.md",
-		"char_ofs": 7058,
-		"byte_ofs": 13228
+		"char_ofs": 7096,
+		"byte_ofs": 13269
 	},
 	{
 		"link": "5-etc/README.md",
-		"char_ofs": 7356,
-		"byte_ofs": 13831
+		"char_ofs": 7394,
+		"byte_ofs": 13872
 	},
 	{
 		"link": "5-etc/1-stop-restart.md",
-		"char_ofs": 7364,
-		"byte_ofs": 13847
+		"char_ofs": 7402,
+		"byte_ofs": 13888
 	},
 	{
 		"link": "5-etc/2-manual-oper.md",
-		"char_ofs": 7569,
-		"byte_ofs": 14293
+		"char_ofs": 7607,
+		"byte_ofs": 14334
 	},
 	{
 		"link": "5-etc/3-license-key.md",
-		"char_ofs": 8117,
-		"byte_ofs": 15382
+		"char_ofs": 8155,
+		"byte_ofs": 15423
 	},
 	{
 		"link": "5-etc/4-system-var.md",
-		"char_ofs": 8219,
-		"byte_ofs": 15592
+		"char_ofs": 8257,
+		"byte_ofs": 15633
 	},
 	{
 		"link": "5-etc/5-flow-amount-log.md",
-		"char_ofs": 8835,
-		"byte_ofs": 16354
+		"char_ofs": 8872,
+		"byte_ofs": 16392
 	}
 ]
