@@ -81,57 +81,57 @@
 	},
 	{
 		"link": "3-command-condition/2-condition/README.md",
-		"char_ofs": 6154,
-		"byte_ofs": 11309
+		"char_ofs": 6175,
+		"byte_ofs": 11341
 	},
 	{
 		"link": "3-command-condition/2-condition/1-msealer-on.md",
-		"char_ofs": 6279,
-		"byte_ofs": 11583
+		"char_ofs": 6300,
+		"byte_ofs": 11615
 	},
 	{
 		"link": "3-command-condition/2-condition/2-msealer-off.md",
-		"char_ofs": 6763,
-		"byte_ofs": 12576
+		"char_ofs": 6784,
+		"byte_ofs": 12608
 	},
 	{
 		"link": "4-monitoring/README.md",
-		"char_ofs": 7085,
-		"byte_ofs": 13245
+		"char_ofs": 7106,
+		"byte_ofs": 13277
 	},
 	{
 		"link": "4-monitoring/1-sealing-status.md",
-		"char_ofs": 7096,
-		"byte_ofs": 13269
+		"char_ofs": 7117,
+		"byte_ofs": 13301
 	},
 	{
 		"link": "5-etc/README.md",
-		"char_ofs": 7394,
-		"byte_ofs": 13872
+		"char_ofs": 7415,
+		"byte_ofs": 13904
 	},
 	{
 		"link": "5-etc/1-stop-restart.md",
-		"char_ofs": 7402,
-		"byte_ofs": 13888
+		"char_ofs": 7423,
+		"byte_ofs": 13920
 	},
 	{
 		"link": "5-etc/2-manual-oper.md",
-		"char_ofs": 7607,
-		"byte_ofs": 14334
+		"char_ofs": 7628,
+		"byte_ofs": 14366
 	},
 	{
 		"link": "5-etc/3-license-key.md",
-		"char_ofs": 8155,
-		"byte_ofs": 15423
+		"char_ofs": 8176,
+		"byte_ofs": 15455
 	},
 	{
 		"link": "5-etc/4-system-var.md",
-		"char_ofs": 8257,
-		"byte_ofs": 15633
+		"char_ofs": 8278,
+		"byte_ofs": 15665
 	},
 	{
 		"link": "5-etc/5-flow-amount-log.md",
-		"char_ofs": 8872,
-		"byte_ofs": 16392
+		"char_ofs": 8893,
+		"byte_ofs": 16424
 	}
 ]
