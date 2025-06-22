@@ -91,47 +91,52 @@
 	},
 	{
 		"link": "3-command-condition/2-condition/2-msealer-off.md",
-		"char_ofs": 7174,
-		"byte_ofs": 13469
+		"char_ofs": 7435,
+		"byte_ofs": 13989
 	},
 	{
 		"link": "4-monitoring/README.md",
-		"char_ofs": 7496,
-		"byte_ofs": 14138
+		"char_ofs": 7757,
+		"byte_ofs": 14658
 	},
 	{
 		"link": "4-monitoring/1-sealing-status.md",
-		"char_ofs": 7507,
-		"byte_ofs": 14162
+		"char_ofs": 7768,
+		"byte_ofs": 14682
 	},
 	{
 		"link": "5-etc/README.md",
-		"char_ofs": 7805,
-		"byte_ofs": 14765
+		"char_ofs": 8066,
+		"byte_ofs": 15285
 	},
 	{
 		"link": "5-etc/1-stop-restart.md",
-		"char_ofs": 7813,
-		"byte_ofs": 14781
+		"char_ofs": 8074,
+		"byte_ofs": 15301
 	},
 	{
 		"link": "5-etc/2-manual-oper.md",
-		"char_ofs": 8018,
-		"byte_ofs": 15227
+		"char_ofs": 8279,
+		"byte_ofs": 15747
 	},
 	{
 		"link": "5-etc/3-license-key.md",
-		"char_ofs": 8529,
-		"byte_ofs": 16240
+		"char_ofs": 8790,
+		"byte_ofs": 16760
 	},
 	{
 		"link": "5-etc/4-system-var.md",
-		"char_ofs": 8631,
-		"byte_ofs": 16450
+		"char_ofs": 8892,
+		"byte_ofs": 16970
 	},
 	{
 		"link": "5-etc/5-flow-amount-log.md",
-		"char_ofs": 9246,
-		"byte_ofs": 17209
+		"char_ofs": 9507,
+		"byte_ofs": 17729
+	},
+	{
+		"link": "5-etc/6-job-composition.md",
+		"char_ofs": 9872,
+		"byte_ofs": 18381
 	}
 ]

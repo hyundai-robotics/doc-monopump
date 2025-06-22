@@ -27,4 +27,5 @@
   * [5.3 라이선스키 등록](5-etc/3-license-key.md)
   * [5.4 시스템 변수](5-etc/4-system-var.md)
   * [5.5 토출량 이력확인](5-etc/5-flow-amount-log.md)
+  * [5.6 작업 프로그램 구성](5-etc/6-job-composition.md)
 
