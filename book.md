@@ -231,6 +231,22 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
 - 리필 토출비 : 리필을 위한 토출비를 설정합니다.
 - 리필 시간 : 리필 동작 시간을 설정합니다.
 
+# 3.2.3 정지/재기동 (stop/restart)
+
+정지나 비상정지 입력으로 로봇이 정지하고 재기동할때 석백 및 리필을 위한 동작 조건을 설정합니다. <br>
+정지시에는 석백 동작을 수행하여 정지 위치에서 실러가 뭉치는것을 방지합니다. <br>
+재기동시는 토출 누락을 방지하기 위해 리필 동작 수행 이후에 로봇이 이동을 시작합니다. 
+
+![](../../_assets/image29.png)
+
+<정지>
+- 석백 토출비 : 석백 동작을 위한 토출비를 설정합니다.
+- 석백 시간 : 석백 동작 시간을 설정합니다.
+
+<재기동>
+- 리필 토출비 : 리필을 위한 토출비를 설정합니다.
+- 리필 시간 : 리필 동작 시간을 설정합니다.
+
 # 4. 모니터링
 
 # 4.1 실링 상태
@@ -252,8 +268,18 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
 
 실러 on구간에서 로봇이 정지/재기동시 모노펌프 건의 동작에 대해서 설명합니다.
 
-- 정지 : m_sealer off 명령을 수행한 것처럼 먼저 석백 동작이 수행되며 그 이후에 리필 동작이 수행됩니다.
-- 재기동 : m_sealer on 명령을 수행한 것처럼 토출이 수행됩니다. 단, 정액토출 모드에서는 토출이 되지 않습니다.
+![](../_assets/image30.png)
+
+- 정지 : stop 조건의 석백 동작을 수행하여 정지 위치에서 실러가 뭉치는것을 방지합니다..
+- 재기동 : 토출 누락을 방지하기 위해 stop 조건의 리필 동작 수행 이후에 로봇이 이동을 시작합니다.
+
+
+{% hint style="info" %}
+참고내용
+- [3.2.3 정지/재기동 (stop/restart)](../3-command-condition/2-condition/3-stop-restart.md)<br>
+- 시스템 변수 ([_sealing.stop_seq_exe_offset_time](./4-system-var.md))
+{% endhint %}
+
 # 5.2 수동 운전(R371)
 
 [R371 : 실러 수동 운전]을 수행했을 때 표시되는 화면에서 모노펌프 건을 수동 운전할 수 있습니다.
@@ -282,7 +308,7 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
 ![](../_assets/image17.png)
 # 5.4 시스템 변수
 
-*   <mark style="color:green;">**_sealing.flow_amount (토출량)**</mark>
+*   <mark style="color:green;">**_sealing.flow_amount**</mark>
 
     ### 설명
         토출 시작부터 계측된 토출량을 얻기위해 사용합니다.
@@ -298,10 +324,50 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
        m_sealer off,gun=1,cnd=1 #토출종료
        print _sealing.flow_amount
        if abs(_sealing.flow_amount - 6) > 1 then
-           print "토출량이 지정된 범위를 벗어났습니다."
+           print "토출량이 지정한 범위를 벗어났습니다."
            stop
        endif
     ```
+    <br>
+    <br>
+
+*   <mark style="color:green;">**_sealing.flow_amount_cycle**</mark>
+
+    ### 설명
+        1 사이클에 대한 토출 시작부터 계측된 토출량을 얻기위해 사용합니다.
+
+    ### 사용 예
+    ```python
+       m_sealer on,gun=1,cnd=1,flow=0.6 #토출시작
+    S74 move L,spd=100mm/sec,accu=1,tool=1
+    S75 move L,spd=100mm/sec,accu=1,tool=1
+       m_sealer off,gun=1,cnd=1 #토출종료
+       print _sealing.flow_amount_cycle
+       if abs(_sealing.flow_amount_cycle - 32) > 3 then
+           print "1사이클 토출량이 지정한 범위를 벗어났습니다."
+           stop
+       endif
+    ```
+    <br>
+    <br>
+
+*   <mark style="color:green;">**_sealing.stop_seq_exe_offset_time**</mark>
+
+    ### 설명
+        정지시에는 stop 조건에 따라 석백 동작을 수행하는데 이 석백 동작의 타이밍을 조정하기 위해서 사용합니다. (기본값 0.1[sec])
+
+    ### 사용 예
+    ```python
+       _sealing.stop_seq_exe_offset_time=-0.2 #정지시 석백타이밍 시간 조정
+       m_sealer on,gun=1,cnd=1,flow=0.6 #토출시작
+    S4 move L,spd=100mm/sec,accu=1,tool=1
+    S5 move L,spd=100mm/sec,accu=1,tool=1
+    S6 move L,spd=100mm/sec,accu=1,tool=1
+    S7 move L,spd=100mm/sec,accu=1,tool=1
+       m_sealer off,gun=1,cnd=1 #토출종료
+    ```
+    <br>
+    <br>
 
 # 5.5 토출량 이력확인
 

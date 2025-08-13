@@ -19,6 +19,7 @@
   * [3.2 실러조건](3-command-condition/2-condition/README.md)
     * [3.2.1 토출 시작 (m_seler on)](3-command-condition/2-condition/1-msealer-on.md)
     * [3.2.2 토출 종료 (m_seler off)](3-command-condition/2-condition/2-msealer-off.md)
+    * [3.2.3 정지/재기동 (stop/restart)](3-command-condition/2-condition/3-stop-restart.md)    
 * [4. 모니터링](4-monitoring/README.md)
   * [4.1 실링 상태](4-monitoring/1-sealing-status.md)
 * [5. 기타](5-etc/README.md)
