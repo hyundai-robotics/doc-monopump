@@ -1,1 +1,1 @@
-﻿# 5. 기타
+# 5. Miscellaneous

@@ -1,18 +1,17 @@
-﻿# 5.5 토출량 이력확인
+# 5.5 Check discharge amount history
 
-기록된 로그 파일로 토출량의 이력을 확인할 수 있습니다.
+You can check the history of discharge amounts from recorded log files.
 
-- date_time : 로그 기록시의 날짜와 시간입니다. <br>
-- job : 현재 프로그램 번호입니다. <br>
-- step : 현재 스텝의 번호입니다. <br>
-- flow_amount : 사이클 시작부터 종료까지 누적된 토출량입니다. <br>
+- date_time: date and time when the log was recorded. <br>
+- job: current program number. <br>
+- step: current step number. <br>
+- flow_amount: cumulative discharged amount from cycle start to stop. <br>
 
 ![](../_assets/image22.png)
 
 ![](../_assets/image23.png)
 
 {% hint style="info" %}
-- 제어기 전원 투입 후 첫번째 기록시에 새로운 로그 파일이 생성됩니다.  
-- 로그 파일은 0 ~ 9의 파일명이 순환하면서 생성됩니다.
+- A new log file is created on the first record after powering on the controller.  
+- Log files are created cyclically with filenames 0 ~ 9.
 {% endhint %}
-

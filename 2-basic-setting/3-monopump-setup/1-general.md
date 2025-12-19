@@ -1,11 +1,10 @@
-﻿# 2.3.1 일반
+# 2.3.1 General
 
-모노펌프 건과 관련된 일반적인 설정입니다.
+General settings related to the monopump gun.
 
 ![](../../_assets/image3.png)
 
-- 제조사 : 모노펌프 건의 제조사를 선택합니다.
-- 토출비 단위 : 토출비 인터페이스를 위한 단위를 선택합니다.
-- 비중 : 실러 물질의 비중을 설정합니다.
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 <토출 off>를 선택하면 실제 토출은 수행하지 않고 작업 프로그램을 실행할 수 있습니다. 
-
+- Manufacturer: select the monopump gun manufacturer.
+- Discharge unit: choose the unit used for the discharge interface.
+- Specific gravity: set the specific gravity of the sealer material.
+- Sealer command execution mode: The m_sealer on/off commands in the job program execute discharge. If <Discharge off> is selected, the job program runs without performing actual discharge.

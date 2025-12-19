@@ -1,330 +1,284 @@
-﻿# ${cont_model} 로봇제어기 기능설명서 - 모노펌프 실러건
+﻿# ${cont_model} Robot Controller Function Manual - Monopump Sealer Gun
 
 {% hint style="warning" %}
-본 제품 설명서에서 제공되는 정보는 HD현대로보틱스의 자산입니다.
+The information provided in this product manual is the property of HD Hyundai Robotics.
 
-HD현대로보틱스의 서면에 의한 동의 없이 전부 또는 일부를 무단 전재 및 재배포할 수 없으며, 제3자에게 제공되거나 다른 목적에 사용할 수 없습니다.
+No part of this manual may be reproduced or redistributed without HD Hyundai Robotics' written consent, nor may it be provided to third parties or used for other purposes.
 
-
-본 설명서는 사전 예고 없이 변경될 수 있습니다.
-
+This manual is subject to change without prior notice.
 
 
 **Copyright ⓒ 2025 by HD Hyundai Robotics**
-{% endhint %}
-# 1. 개요
+{% endhint %}# 1. 개요
 
-# 1.1 사전 필요 정보
+# 1.1 Preliminary information
 
-이 설명서를 이해하기 위해서는 다음과 같은 사전 정보가 필요합니다.
+To understand this manual, the following prior knowledge is required.
 
-1. **${cont_model} 로봇 제어기 조작 지식**
-2. **모노펌프 건의 동작 원리**
-# 1.2 모노펌프 시스템
+1. **Knowledge of operating the ${cont_model} robot controller**
+2. **Understanding of the operation principle of a monopump gun**# 1.2 Monopump system
 
 
-### <mark style="color:green;">1. 전체 시스템 구성 </mark>
+### <mark style="color:green;">1. Complete system configuration </mark>
 
-    하기의 그림은 전체 시스템 구성을 나타냅니다. 로봇 제어기로 모노펌프 건을 직접 제어할 수 있습니다.
+    The following figure shows the overall system configuration. The monopump gun can be directly controlled by the robot controller.
 
 ![](../_assets/image18.png)
 
-### <mark style="color:green;">2. 모노펌프건 구성</mark>
+### <mark style="color:green;">2. Monopump gun components</mark>
 
-    하기의 그림은 모노펌프 건의 구성을 나타냅니다. 서보모터, 로터, 스테이트로 구성되어 있습니다.
+    The following figure shows the composition of the monopump gun. It consists of a servo motor, rotor, and stator.
 
-![](../_assets/image19.png)
+![](../_assets/image19.png)# 2. 기본 설정
 
-# 2. 기본 설정
+# 2.1 Additional axis parameter settings
 
-# 2.1 부가축 파라미터 설정
-
-실러 건을 로봇의 부가축으로 직접 제어할 때는 축 사양을 <실러>로 설정합니다. 또한 모노펌프 건의 토출량(cc/s)은 해당 모터의 회전속도(rpm)에 따라 결정되기 때문에 해당 축의 속도를 제어해야 합니다. 이에 따라 축 구성을 <속도제어>로 설정합니다.
+When controlling the sealer gun directly as an additional axis of the robot, set the axis type to <Sealer>. Because the monopump gun's discharge amount (cc/s) is determined by the motor speed (rpm), you must control the axis speed. Therefore, set the axis configuration to <Speed control>.
 
 ![](../_assets/image1.png)
 
 
-- 감속기를 사용하지 않고 모터와 직결한다면 감속비를 360:1으로 설정합니다. 이는 모터 1회전에 실제 기구는 360deg 회전함을 의미합니다. 감속기가 존재한다면 해당 감속기의 감속비를 설정하고 또한 토출이 진행되는 방향을 고려하여 감속비 부호를 설정합니다. <br>
+- If the motor is directly coupled without a gearbox, set the reduction ratio to 360:1. This means one motor revolution corresponds to 360° of the mechanism. If a gearbox exists, set the gearbox reduction ratio and set the sign of the ratio according to the discharge direction. <br>
 
 ![](../_assets/image28.png)
 
-- 가감속 파라미터의 가속시간은 최고속에 도달하는 시간을 감속시간은 최고속에서 정지까지 시간을 결정하는 파라미터로 모노펌프건에서 이 설정값이 크면 토출 시작과 종료시, 석백과 리필 동작시 반응이 늦기 때문에 원하는 품질을 확보하기 어렵습니다.<br>
-따라서 가능한 범위에서 작게 설정하여 동작속도를 높여서 사용합니다.
+- The acceleration time parameter determines the time to reach maximum speed, and the deceleration time determines the time from maximum speed to stop. If these values are large for the monopump gun, the response for discharge start/stop and suck-back/refill will be delayed, making it difficult to achieve the desired quality. <br>
+Therefore, set these values as small as possible to increase operating speed.# 2.2 Sealer gun data settings
 
-# 2.2 실러건 데이터 설정
-
-[시스템] -> [4: 응용 파라미터] -> [20: 실링] -> [1: 실러건 설정] 화면에 집입합니다.
-실러건에 따른 건의 타입과 부가축을 설정합니다. “+”버튼에 의한 건의 추가, “-”버튼에 의한 건의 삭제가 가능합니다.
+Go to [System] -> [4: Application Parameters] -> [20: Sealing] -> [1: Sealer Gun Settings].
+Set the gun type and additional axis for each sealer gun. You can add a gun with the "+" button and remove one with the "-" button.
 
 ![](../_assets/image2.png)
 
-- 건 타입 : 모노펌프 건으로 설정합니다.
-- 부가축 : 해당 건의 부가축 번호를 설정합니다.
+- Gun type: set to Monopump gun.
+- Additional axis: set the axis number for the gun.
 
-[속성] 버튼에 의한 상세한 건의 설정이 가능합니다.
-# 2.3 모노펌프건 설정
+Detailed gun settings are available via the [Properties] button.# 2.3 Monopump gun setup# 2.3.1 General
 
-# 2.3.1 일반
-
-모노펌프 건과 관련된 일반적인 설정입니다.
+General settings related to the monopump gun.
 
 ![](../../_assets/image3.png)
 
-- 제조사 : 모노펌프 건의 제조사를 선택합니다.
-- 토출비 단위 : 토출비 인터페이스를 위한 단위를 선택합니다.
-- 비중 : 실러 물질의 비중을 설정합니다.
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 <토출 off>를 선택하면 실제 토출은 수행하지 않고 작업 프로그램을 실행할 수 있습니다. 
+- Manufacturer: select the monopump gun manufacturer.
+- Discharge unit: choose the unit used for the discharge interface.
+- Specific gravity: set the specific gravity of the sealer material.
+- Sealer command execution mode: The m_sealer on/off commands in the job program execute discharge. If <Discharge off> is selected, the job program runs without performing actual discharge.# 2.3.2 Flow rate tuning
 
-# 2.3.2 토출비 튜닝
-
-모노펌프 건의 모터 회전속도(rpm)에 따른 토출비(cc/s)를 설정합니다. 최대 6단계의 구간으로 나누어 설정이 가능하도록 구성되어 있습니다.<br>
-토출비는 지정 시간동안 지정 속도로 토출된 양을 저울에서 계측한 후 "계측값(g) * 비중 / 시간"의 계산값으로 설정합니다. 
+Set the discharge rate (cc/s) according to the monopump gun motor speed (rpm). It can be configured in up to 6 segments.<br>
+The flow rate is determined by measuring the amount discharged at a specified speed for a specified time on a scale and calculated as: "measured value (g) * specific gravity / time." 
 
 ![](../../_assets/image4.png)
 
 
-[수동 토출 시작] 버튼을 이용하여 해당 모노펌프 건의 모터를 지정된 속도로 설정된 시간동안만 구동할 수 있습니다.
+Use the [Start manual discharge] button to run the monopump gun motor at the specified speed for the set time.
 
 ![](../../_assets/image5.png)
 
 
-하기의 그림은 수동 도출 실행에 대한 진행 상태를 표시합니다.
+The following figure shows the status during manual discharge execution.
 
 ![](../../_assets/image6.png)
 
 
-[수동 토출 정지] 버튼을 이용하여 수동 토출 실행을 강제로 정지시킬 수 있습니다.
+Use the [Stop manual discharge] button to forcibly stop manual discharge.
 
 ![](../../_assets/image7.png)
 
 
-[초기화] 버튼을 이용하여 모터 1회전에 대한 토출량을 기준으로 토출비를 초기값으로 설정할 수 있습니다.
+Use the [Initialize] button to set the flow rate initial values based on the amount per one motor revolution.
 
-![](../../_assets/image8.png)
+![](../../_assets/image8.png)# 2.3.3 Input signal assignment
 
-
-# 2.3.3 입력 신호 할당
-
-모노펌프 건과 관련하여 로봇제어기로 입력되는 신호에 대한 설정입니다.
+Settings for signals input to the robot controller related to the monopump gun.
 
 ![](../../_assets/image9.png)
 
-[자동할당] 버튼에 의하여 선택된 용접기 제조사에 따른 신호의 자동 설정이 가능합니다. <br>
+The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
     ![](../../_assets/image9_1.png)
 
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 설정된 신호가 on 상태이면 실제 토출은 수행하지 않고 작업 프로그램을 실행할 수 있습니다. <br> 
-- 통신 상태 : 실러 제어반과의 통신 상태를 확인합니다. 실러 제어반은 해당 신호를 1초마다 on/off 반복하도록 제어하면 됩니다. <br>
-로봇 제어기는 해당 신호의 상태가 1초 이상 변경되지 않으면 "E6319 실링 장비 통신이상" 에러를 발생합니다. <br>
-- 그 외 신호 : 실러 제어반의 상태를 확인합니다. 로봇 제어기에서 해당 상태를 검지하여 에러나 경고를 발생하고자 할 때에는 사용자 정의 에러/경고 기능을 사용하십시오. <br>
+- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, if the configured signal is ON, the job program will run without performing actual discharge. <br> 
+- Communication status: Check communication status with the sealer control panel. The sealer control panel should toggle the signal ON/OFF every second. <br>
+The robot controller raises the error "E6319 Sealing equipment communication error" if the signal does not change state for more than 1 second. <br>
+- Other signals: Check the state of the sealer control panel. If you want the robot controller to detect these states and raise errors or warnings, use the user-defined error/warning function. <br>
 ![](../../_assets/image9_2.png)
 
-- 압력 센서 : 압력 센서 입력에 대한 정보를 설정합니다. <br>
-	- 사양(최소 ~ 최대) :압력 센서 사양의 최소값과 최대값을 설정합니다. <br>
-	- 통신(최소 ~ 최대) :압력 센서의 데이터가 통신으로 전달될 때 이에대한 최소값과 최대값을 설정합니다. <br>
-	- 신호 할당 :압력 센서에서 입력되는 신호를 설정합니다. <br>
-	- 할당된 비트 수 : 압력 센서에서 사용되는 신호의 비트수를 설정합니다. <br>
-	- 인터페이스 변수 : 계산된 압력값의 인터페이스를 위한 변수값을 설정합니다. 여기서는 현재 입력되는 압력으로 계산된 압력값이 _mf4의 메모리에 대입됩니다. <br>
+- Pressure sensor: Set information for pressure sensor input. <br>
+	- Spec (min ~ max): set the minimum and maximum specification values for the pressure sensor. <br>
+	- Communication (min ~ max): set the min and max values when the pressure sensor delivers data via communication. <br>
+	- Signal assignment: assign the input signal for the pressure sensor. <br>
+	- Assigned bit count: set the bit count used for the pressure sensor signal. <br>
+	- Interface variable: set the variable for interfacing the calculated pressure value. Here, the calculated pressure value from current input is assigned to _mf4 memory. <br>
 
-       ![](../../_assets/image10.png)
+       ![](../../_assets/image10.png)# 2.3.4 Output signal assignment
 
-# 2.3.4 출력 신호 할당
-
-모노펌프 건과 관련하여 로봇제어기에서 출력하는 신호에 대한 설정입니다.
+Settings for signals output from the robot controller related to the monopump gun.
 
 ![](../../_assets/image10_5.png)
 
-[자동할당] 버튼에 의하여 선택된 용접기 제조사에 따른 신호의 자동 설정이 가능합니다. <br>
+The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
 ![](../../_assets/image9_1.png)
 
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 사용자 설정이나 입력신호 상태에 의해서 실제 토출을 수행하지 않고 작업 프로그램을 실행할 수 있습니다. 실제 토출의 수행 여부에 대한 출력입니다. <br> 
-- 토출 중 : 모노펌프 건이 실러의 토출 여부를 출력합니다. <br>
-- 에러 리셋 : 실러 제어반에 이상이 발생한 경우에 이를 리셋하기 위한 출력입니다.  <br>
-  R1(에러 리셋) 동작이나 "에러/경보 신호 클리어" 신호가 입력되면 동작하는데 동작은 1초 동안 on되는 펄스 신호로 출력됩니다.<br>
-- 그 외 신호 : 로봇언어에서 신호출력으로 실러 제어반에 상태를 전달할 때 사용하십시오. <br>
+- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, depending on user settings or input signal states, the job program may run without performing actual discharge. This output indicates whether actual discharge is being performed. <br> 
+- Discharging: The monopump gun outputs whether it is currently discharging. <br>
+- Error reset: Output used to reset the sealer control panel in case of an error. R1 (error reset) operation or "Error/Alarm signal clear" input causes a 1-second ON pulse output for reset. <br>
+- Other signals: Use these to send sealer panel states via output signals in robot language. <br># 3. Commands and sealer conditions
 
-# 3. 명령문과 실러조건
+Describes commands and sealer condition settings related to sealing operations.# 3.1 Commands
 
-실링 작업과 관련된 명령문과 실러조건 설정에 대해 설명합니다.
-
-# 3.1 명령문
-
-job 프로그램에서 모노펌프 건과 관련된 명령문에 대해서 알아봅시다.일반적으로 토출은 m_sealer on에서 m_sealer off의 구간내에서 수행됩니다.
+Let's look at the job program commands related to the monopump gun. Usually discharge is performed between m_sealer on and m_sealer off.
 
 
 {% hint style="info" %}
-수동모드에서 m_sealer 명령문을 실행할 때는 명령문은 실행 완료로 처리하지만 실제 동작은 수행하지 않습니다.
+When executing the m_sealer command in manual mode, the command is treated as completed but actual operation is not performed.
 {% endhint %}
 
 
-![](../../_assets/image11.png)
+![](../../_assets/image11.png)# 3.1.1 Discharge start (m_sealer on)
 
-# 3.1.1 토출 시작 (m_seler on)
+This command starts monopump gun discharge and operates only in automatic mode. The format is as follows.
 
-모노펌프 건의 토출을 시작하는 명령문으로 형식은 다음과 같으며 자동모드에서만 동작합니다.
-
-#### <mark style="color:green;">명령문 형식</mark>
+#### <mark style="color:green;">Command format</mark>
 ```
 m_sealer on,gun=1,cnd=1,flow=0.5,od=_,ot=_
 ```
 
-#### <mark style="color:green;">파라미터</mark>
+#### <mark style="color:green;">Parameters</mark>
 
-|파라미터| 설명                                                                                                    |    사용 예    |
+|Parameter| Description                                                                                                    |    Example    |
 | :---: | ------------------------------------------------------------------------------------------------------- | :-------: |
-| on   | <p>실러 조건(cnd)의 설정에 따라 해당 건의 토출을 시작(str)</p>   | "on" |
-| gun  | <p>토출을 시작할 모노펌프 건의 번호를 지정(int)</p>              |  1   |
-| cnd  | 토출을 위한 조건 번호(int)                                     | 1    |
-| flow   | <p>실러 조건(cnd)에 설정된 정속, 속도비례, 정액의 토출 모드 설정에 따라 하기와 같이 동작(double)</p><ul><li>정속 : 로봇의 속도에 무관하게 flow에 지정한 토출비(cc/s)로 토출</li><li>속도비례 : 로봇의 툴 끝 이동속도에 비례한 토출을 수행합니다. 로봇의 툴 끝 이동속도(mm/s)에 대한 토출비(cc/s)는 실러 조건에서 설정. (실러조건 참고) flow를 지정하지 않은 경우는 설정된 토출비의 1배로 토출되며 flow가 1.3으로 지정된 경우는 설정된 토출비의 1.3배로 출력</li><li>정액 : 지정된 토출량만 출력한 후 토출을 종료하며 이때 토출량은 실러 조건에서 설정(실러조건 참고) <br>  - od와 ot가 모두 기록되지 않은 경우 : 해당 명령문에서 지정된 토출량을 모두 토출한 후 off 조건에 대한 동작을 수행<br>  - od와 ot가 기록된 경우 : 이후의 명령문들을 수행하면서 지정된 토출량을 토출한 후 off 조건에 대한 동작을 수행</li></ul>                                         | 1.3 |
-| od  | 로봇이 목표위치 도달 전/후에 지정된 거리만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행(double)                                     | -0.5    |
-| ot  | 로봇이 목표위치 도달 전/후에 지정된 시간만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행. 만약 od와 ot가 모두 기록된 경우 od를 우선으로 적용(double)                                     | -0.5    |
+| on   | <p>Starts discharge for the gun according to the sealer condition (cnd) (str)</p>   | "on" |
+| gun  | <p>Specifies the gun number to start discharge (int)</p>              |  1   |
+| cnd  | Condition number for discharge (int)                                     | 1    |
+| flow   | <p>Depending on the sealer condition's mode (constant, speed-proportional, fixed amount), behaves as follows (double)</p><ul><li>Constant: discharges at the rate (cc/s) specified by flow, regardless of robot speed</li><li>Speed-proportional: discharges proportionally to tool-tip speed. The cc/s per mm/s is configured in the sealer condition. If flow is not specified, uses the configured discharge rate; if flow is 1.3, outputs 1.3 times the configured rate</li><li>Fixed amount: discharges the specified amount and then stops; the amount is set in sealer condition (see sealer conditions) <br>  - If both od and ot are not specified: discharges the full amount specified in the command then performs off-condition actions<br>  - If od and ot are specified: performs subsequent commands while discharging the specified amount and then performs off-condition actions</li></ul>                                         | 1.3 |
+| od  | Use this to adjust command execution by a specified distance before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok) (double)                                     | -0.5    |
+| ot  | Use this to adjust command execution by a specified time before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok). If both od and ot are specified, od takes precedence (double)                                     | -0.5    |# 3.1.2 Discharge stop (m_sealer off)
 
-# 3.1.2 토출 종료 (m_seler off)
+This command stops monopump gun discharge. The format is as follows. <br>
+The off command works in manual mode as well. <br>
 
-모노펌프 건의 토출을 종료하는 명령문으로 형식은 다음과 같습니다. <br>
-off 명령문은 수동모드에서도 동작합니다. <br>
-
-#### <mark style="color:green;">명령문 형식</mark>
+#### <mark style="color:green;">Command format</mark>
 ```
 m_sealer off,gun=1,cnd=1,od=_,ot=_
 ```
 
-#### <mark style="color:green;">파라미터</mark>
+#### <mark style="color:green;">Parameters</mark>
 
-|파라미터| 설명                                                                                                    |    사용 예    |
+|Parameter| Description                                                                                                    |    Example    |
 | :---: | ------------------------------------------------------------------------------------------------------- | :-------: |
-| off   | <p>실러 조건(cnd)의 설정에 따라 해당 건의 토출을 종료(str)</p>      | "off" |
-| gun  | <p>토출을 종료할 모노펌프 건의 번호를 지정(int)</p>                  |  1   |
-| cnd  | 토출 종료를 위한 조건 번호(int). 토출 종료시 먼저 석백이 수행되며 그 후 리필동작이 수행. 석백 동작을 위한 토출비(cc/s)와 시간 그리고 리필 동작을 위한 토출비(cc/s)와 시간은 실러 조건에서 설정(실러조건 참고)(int)                                          | 1    |
-| od  | 로봇이 목표위치 도달 전/후에 지정된 거리만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행(double)                                     | -0.5    |
-| ot  | 로봇이 목표위치 도달 전/후에 지정된 시간만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행. 만약 od와 ot가 모두 기록된 경우 od를 우선으로 적용(double)                                     | -0.5    |
+| off   | <p>Stops discharge for the gun according to the sealer condition (cnd) (str)</p>      | "off" |
+| gun  | <p>Specifies the gun number to stop discharge (int)</p>                  |  1   |
+| cnd  | Condition number for stopping discharge (int). When stopping, suck-back is performed first, followed by refill. The suck-back flow rate (cc/s) and time and the refill flow rate (cc/s) and time are set in the sealer condition (see sealer conditions) (int)                                          | 1    |
+| od  | Use this to adjust command execution by a specified distance before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok) (double)                                     | -0.5    |
+| ot  | Use this to adjust command execution by a specified time before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok). If both od and ot are specified, od takes precedence (double)                                     | -0.5    |# 3.2 Sealer conditions
 
-# 3.2 실러조건
+Sealer conditions are set via the [Properties] button in the m_sealer on/off commands. You can add conditions with the "+" button and remove them with the "-" button. Up to 8 conditions are currently supported.# 3.2.1 Discharge start (m_sealer on)
 
-실러조건은 m_sealer on이나 off 명령문에서 [속성]버튼에 의해 설정합니다. “+”버튼에 의한 조건의 추가, “-”버튼에 의한 조건의 삭제가 가능하며 현재 최대 8개의 조건을 지원합니다.  
-
-# 3.2.1 토출 시작 (m_seler on)
-
-m_sealer on 명령을 수행할 때 토출 조건을 설정합니다.
+Set discharge conditions for the m_sealer on command.
 
 ![](../../_assets/image12.png)
 
-- 토출 모드 : 정속, 속도비례, 정액의 토출 모드를 선택합니다. 속도비례는 로봇의 툴 끝 이동속도에 따라 자동으로 토출비가 결정됩니다.
-- 토출량(정액 모드) : 토출 모드가 정액인 경우 토출량을 설정합니다.
-- <속도-토출비 테이블> : 토출 모드가 속도비례인 경우 로봇 툴 끝의 이동속도(mm/s)에 따른 토출비를 설정합니다. 최대 5단계의 구간으로 나누어 설정이 가능하도록 구성되어 있습니다. 설정하는 방법은 로봇 Lock을 유효로 설정한 상태에서 하기의 그림과 같이 m_sealer on ~ off 구간을 정속 모드로 실행하여 토출량을 확인합니다. 동일한 토출량이 되었을 때 해당 로봇속도에 따른 토출비를 설정합니다.
+- Discharge mode: select constant, speed-proportional, or fixed-amount discharge modes. Speed-proportional automatically determines flow according to tool-tip speed.
+- Discharge amount (fixed mode): set the discharge amount when fixed-amount mode is selected.
+- <Speed-Flow table>: For speed-proportional mode, set the flow by tool-tip speed (mm/s). It can be configured in up to 5 segments. To set it, enable robot Lock and run an m_sealer on~off region in constant mode to measure discharge, then set the flow corresponding to the robot speed when the same discharge amount is observed.
 
   ![](../../_assets/image13.png)
 
-  로봇의 속도가 낮은 구간에서 로봇 속도에 따른 토출비을 정비례 관계로 적용한다면 하기의 그림과 같이 토출 시작시 토출이 누락되는 현상이 발생합니다. <br>
+  If you apply a strictly proportional relationship between robot speed and flow at low speeds, discharge may be missed at the start as shown below. <br>
   ![](../../_assets/image26.png)
 
-  상기 토출 시작시 부족한 토출량을 보상하기 위해서는 하기의 그림과 같이 로봇의 속도가 0 ~ 50mm/s의 저속에서도 일정량 이상의 토출이 되도록 운용하는 것이 필요합니다. <br>
-  ![](../../_assets/image24.png)
-# 3.2.2 토출 종료 (m_seler off)
+  To compensate for insufficient discharge at the start, operate so that a certain minimum amount of discharge occurs even at low speeds of 0 ~ 50 mm/s as shown below. <br>
+  ![](../../_assets/image24.png)# 3.2.2 Discharge stop (m_sealer off)
 
-m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설정합니다. 석백은 토출이 끝난 후 잔량 제거를 위한 동작이며 리필은 석백이 끝나고 노즐에 실러를 충진하는 동작입니다. 
+When executing m_sealer off, set the conditions for suck-back and refill. Suck-back removes residual material after discharge, and refill fills the nozzle after suck-back.
 
 ![](../../_assets/image14.png)
 
-- 석백 토출비 : 석백 동작을 위한 토출비를 설정합니다.
-- 석백 시간 : 석백 동작 시간을 설정합니다.
-- 지연 시간 : 석백과 리필 사이에 대기 시간을 설정합니다.
-- 리필 토출비 : 리필을 위한 토출비를 설정합니다.
-- 리필 시간 : 리필 동작 시간을 설정합니다.
+- Suck-back flow rate: set the flow rate for suck-back.
+- Suck-back time: set the suck-back duration.
+- Delay time: set the wait time between suck-back and refill.
+- Refill flow rate: set the flow rate for refill.
+- Refill time: set the duration for refill.# 3.2.3 Stop/restart
 
-# 3.2.3 정지/재기동 (stop/restart)
-
-정지나 비상정지 입력으로 로봇이 정지하고 재기동할때 석백 및 리필을 위한 동작 조건을 설정합니다. <br>
-정지시에는 석백 동작을 수행하여 정지 위치에서 실러가 뭉치는것을 방지합니다. <br>
-재기동시는 토출 누락을 방지하기 위해 리필 동작 수행 이후에 로봇이 이동을 시작합니다. 
+Set the conditions for suck-back and refill when the robot stops (stop or emergency stop) and restarts. <br>
+On stop, perform suck-back to prevent sealer clumping at the stop position. <br>
+On restart, the robot starts moving after refill to prevent missed discharge. 
 
 ![](../../_assets/image29.png)
 
-<정지>
-- 석백 토출비 : 석백 동작을 위한 토출비를 설정합니다.
-- 석백 시간 : 석백 동작 시간을 설정합니다.
+<Stop>
+- Suck-back flow rate: set the flow rate for suck-back.
+- Suck-back time: set the suck-back duration.
 
-<재기동>
-- 리필 토출비 : 리필을 위한 토출비를 설정합니다.
-- 리필 시간 : 리필 동작 시간을 설정합니다.
+<Restart>
+- Refill flow rate: set the refill flow rate.
+- Refill time: set the refill duration.# 4. Monitoring# 4.1 Sealing status
 
-# 4. 모니터링
-
-# 4.1 실링 상태
-
-실러 상태를 확인하기 위한 모니터링창에 대해서 설명합니다. [창조정]에서 실링 상태를 선택합니다.
+Describes the monitoring window for checking sealer status. Select Sealing Status in [Window Settings].
 
 ![](../_assets/image15.png)
 
 ![](../_assets/image16.png)
 
-- 토출비 : 현재 토출되는 토출비를 표시합니다.
-- RPM 지령값 : 토출비에 해당하는 실러 모터의 RPM 지령값입니다.
-- RPM 현재값 : 실러 모터의 RPM 현재값을 표시합니다.
-- 압력 : 압력 센서에 의해 입력되는 압력값을 표시합니다.
-- 토출량 : 토출 시작부터 계측된 토출양을 표시합니다.
+- Flow rate: shows the current discharge flow rate.
+- RPM command: RPM command corresponding to the flow rate.
+- RPM actual: shows the current RPM of the sealer motor.
+- Pressure: shows the pressure value from the pressure sensor.
+- Discharged amount: shows the amount measured since discharge start.# 5. Miscellaneous# 5.1 Stop/Restart in sealer ON region
 
-# 5. 기타
-# 5.1 실러 on구간 정지/재기동
-
-실러 on구간에서 로봇이 정지/재기동시 모노펌프 건의 동작에 대해서 설명합니다.
+Explains monopump gun behavior when the robot stops/restarts in a sealer ON region.
 
 ![](../_assets/image30.png)
 
-- 정지 : stop 조건의 석백 동작을 수행하여 정지 위치에서 실러가 뭉치는것을 방지합니다..
-- 재기동 : 토출 누락을 방지하기 위해 stop 조건의 리필 동작 수행 이후에 로봇이 이동을 시작합니다.
+- Stop: perform suck-back for the stop condition to prevent sealer clumping at the stop position.
+- Restart: the robot starts moving after performing the stop-condition refill to prevent missed discharge.
 
 
 {% hint style="info" %}
-참고내용
-- [3.2.3 정지/재기동 (stop/restart)](../3-command-condition/2-condition/3-stop-restart.md)<br>
-- 시스템 변수 ([_sealing.stop_seq_exe_offset_time](./4-system-var.md))
-{% endhint %}
+Reference
+- [3.2.3 Stop/restart](../3-command-condition/2-condition/3-stop-restart.md)<br>
+- System variables ([_sealing.stop_seq_exe_offset_time](./4-system-var.md))
+{% endhint %}# 5.2 Manual operation (R371)
 
-# 5.2 수동 운전(R371)
+You can manually operate the monopump gun from the screen shown when performing [R371: Sealer manual operation].
 
-[R371 : 실러 수동 운전]을 수행했을 때 표시되는 화면에서 모노펌프 건을 수동 운전할 수 있습니다.
-
-- 토출비 : 수동 운전을 위한 토출비를 설정합니다. <br>
-- 토출량 : 정량토출 동작시 토출량을 설정합니다. <br>
+- Flow rate: set the flow rate for manual operation. <br>
+- Discharge amount: set the discharge amount for fixed-amount discharge. <br>
 
 ![](../_assets/image20.png)
 ![](../_assets/image21.png)
 
-- 정속토출 <br>
- 설정된 토출비로 토출을 시작합니다. 토출을 정지하기 위해서는 [토출정지] 버튼을 별도로 수행하여야 합니다. <br>
-- 정량토출  <br>
- 설정된 토출비로 토출을 시작한 후 설정된 토출량에 도달하면 자동으로 토출을 정지합니다. [토출정지] 버튼으로 강제로 토출을 정지할 수 있습니다. <br>
-- 토출정지 <br>
- 토출을 정지하기 위해 사용합니다. <br>
+- Constant discharge <br>
+ Starts discharge at the set flow rate. Use the [Stop discharge] button to stop discharge. <br>
+- Fixed-amount discharge  <br>
+ Starts discharge at the set flow rate and automatically stops when the set amount is reached. You can forcibly stop discharge using the [Stop discharge] button. <br>
+- Stop discharge <br>
+ Use this to stop discharge. <br>
 
 {% hint style="info" %}
-토출 정지시에는 항상 [off] 탭에 설정된 석백과 리필 조건에 따른 동작이 수행됩니다.
-{% endhint %}
+When stopping discharge, actions according to the suck-back and refill conditions set in the [off] tab are always performed.
+{% endhint %}# 5.3 License key registration
 
-# 5.3 라이선스키 등록
+A license key for the "Sealing option feature" is required to use this function. Please contact us.
 
-본 기능을 사용하기 위해서는 “실링 옵션 기능”에 대한 라이선스키가 필요합니다. 당사에 문의하십시오.
-
-![](../_assets/image17.png)
-# 5.4 시스템 변수
+![](../_assets/image17.png)# 5.4 System variables
 
 *   <mark style="color:green;">**_sealing.flow_amount**</mark>
 
-    ### 설명
-        토출 시작부터 계측된 토출량을 얻기위해 사용합니다.
+    ### Description
+        Used to obtain the measured discharged amount since discharge start.
 
-    ### 사용 예
+    ### Usage example
     ```python
-       m_sealer on,gun=1,cnd=1,flow=0.6 #토출시작
+       m_sealer on,gun=1,cnd=1,flow=0.6 #discharge start
     S4 move L,spd=100mm/sec,accu=1,tool=1
     S5 move L,spd=100mm/sec,accu=1,tool=1
     S6 move L,spd=100mm/sec,accu=1,tool=1
     S7 move L,spd=100mm/sec,accu=1,tool=1
     S8 move L,spd=100mm/sec,accu=1,tool=1
-       m_sealer off,gun=1,cnd=1 #토출종료
+       m_sealer off,gun=1,cnd=1 #discharge stop
        print _sealing.flow_amount
        if abs(_sealing.flow_amount - 6) > 1 then
-           print "토출량이 지정한 범위를 벗어났습니다."
+           print "Discharged amount is outside the specified range."
            stop
        endif
     ```
@@ -333,18 +287,18 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
 
 *   <mark style="color:green;">**_sealing.flow_amount_cycle**</mark>
 
-    ### 설명
-        1 사이클에 대한 토출 시작부터 계측된 토출량을 얻기위해 사용합니다.
+    ### Description
+        Used to obtain the measured discharged amount for one cycle from start to stop.
 
-    ### 사용 예
+    ### Usage example
     ```python
-       m_sealer on,gun=1,cnd=1,flow=0.6 #토출시작
+       m_sealer on,gun=1,cnd=1,flow=0.6 #discharge start
     S74 move L,spd=100mm/sec,accu=1,tool=1
     S75 move L,spd=100mm/sec,accu=1,tool=1
-       m_sealer off,gun=1,cnd=1 #토출종료
+       m_sealer off,gun=1,cnd=1 #discharge stop
        print _sealing.flow_amount_cycle
        if abs(_sealing.flow_amount_cycle - 32) > 3 then
-           print "1사이클 토출량이 지정한 범위를 벗어났습니다."
+           print "1-cycle discharged amount is outside the specified range."
            stop
        endif
     ```
@@ -353,50 +307,46 @@ m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설
 
 *   <mark style="color:green;">**_sealing.stop_seq_exe_offset_time**</mark>
 
-    ### 설명
-        정지시에는 stop 조건에 따라 석백 동작을 수행하는데 이 석백 동작의 타이밍을 조정하기 위해서 사용합니다. (기본값 0.1[sec])
+    ### Description
+        This is used to adjust the timing of the suck-back action when stopping (default 0.1 [sec]).
 
-    ### 사용 예
+    ### Usage example
     ```python
-       _sealing.stop_seq_exe_offset_time=-0.2 #정지시 석백타이밍 시간 조정
-       m_sealer on,gun=1,cnd=1,flow=0.6 #토출시작
+       _sealing.stop_seq_exe_offset_time=-0.2 #adjust suck-back timing on stop
+       m_sealer on,gun=1,cnd=1,flow=0.6 #discharge start
     S4 move L,spd=100mm/sec,accu=1,tool=1
     S5 move L,spd=100mm/sec,accu=1,tool=1
     S6 move L,spd=100mm/sec,accu=1,tool=1
     S7 move L,spd=100mm/sec,accu=1,tool=1
-       m_sealer off,gun=1,cnd=1 #토출종료
+       m_sealer off,gun=1,cnd=1 #discharge stop
     ```
     <br>
-    <br>
+    <br># 5.5 Check discharge amount history
 
-# 5.5 토출량 이력확인
+You can check the history of discharge amounts from recorded log files.
 
-기록된 로그 파일로 토출량의 이력을 확인할 수 있습니다.
-
-- date_time : 로그 기록시의 날짜와 시간입니다. <br>
-- job : 현재 프로그램 번호입니다. <br>
-- step : 현재 스텝의 번호입니다. <br>
-- flow_amount : 사이클 시작부터 종료까지 누적된 토출량입니다. <br>
+- date_time: date and time when the log was recorded. <br>
+- job: current program number. <br>
+- step: current step number. <br>
+- flow_amount: cumulative discharged amount from cycle start to stop. <br>
 
 ![](../_assets/image22.png)
 
 ![](../_assets/image23.png)
 
 {% hint style="info" %}
-- 제어기 전원 투입 후 첫번째 기록시에 새로운 로그 파일이 생성됩니다.  
-- 로그 파일은 0 ~ 9의 파일명이 순환하면서 생성됩니다.
-{% endhint %}
+- A new log file is created on the first record after powering on the controller.  
+- Log files are created cyclically with filenames 0 ~ 9.
+{% endhint %}# 5.6 Job program composition
 
-# 5.6 작업 프로그램 구성
+A job program layout to better match the start and stop timing of discharge when using a monopump gun. <br>
 
-모노펌프 건으로 토출의 시작 시점과 종료 시점을 보다 쉽게 맞추기 위한 작업 프로그램 구성 방법입니다. <br>
-
-일반적으로 사용하는 작업 프로그램 형태를 사용한다면 하기의 그림과 같이 토출의 시작/종료 시점에서 누락이 발생하거나 토출량이 부족한 현상으로 나타납니다. <br>
+If you use a commonly used job layout, the start/stop points often miss or the discharged amount may be insufficient, as shown below. <br>
 
 ![](../_assets/image27.png)
 
-상기 현상을 보완하기 위한 방법으로 하기의 그림과 같이 토출전 스텝과 토출후의 스텝을 동일한 위치로 기록한 상태에서 토출후의 스텝에는 accu를 0으로 설정하고 토출전 스텝에는 accu를 1로 설정합니다. 이후에 m_sealer on 명령문에서 ot나 od 명령문을 사용하여 명령문을 실행하는 시점을 조정합니다.
+As a method to compensate for the above phenomenon, record the step before and after discharge at the same position, set accu to 0 for the post-discharge step and set accu to 1 for the pre-discharge step. Then use ot or od in the m_sealer on command to adjust the timing of command execution.
 
 ![](../_assets/image25.png)
 
-토출 종료 지점에서도 동일한 방식으로 명령문을 구성하여 사용합니다. 
+Use the same method to structure commands at the discharge stop point.

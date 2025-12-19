@@ -1,15 +1,13 @@
-﻿# 2.3.4 출력 신호 할당
+# 2.3.4 Output signal assignment
 
-모노펌프 건과 관련하여 로봇제어기에서 출력하는 신호에 대한 설정입니다.
+Settings for signals output from the robot controller related to the monopump gun.
 
 ![](../../_assets/image10_5.png)
 
-[자동할당] 버튼에 의하여 선택된 용접기 제조사에 따른 신호의 자동 설정이 가능합니다. <br>
+The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
 ![](../../_assets/image9_1.png)
 
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 사용자 설정이나 입력신호 상태에 의해서 실제 토출을 수행하지 않고 작업 프로그램을 실행할 수 있습니다. 실제 토출의 수행 여부에 대한 출력입니다. <br> 
-- 토출 중 : 모노펌프 건이 실러의 토출 여부를 출력합니다. <br>
-- 에러 리셋 : 실러 제어반에 이상이 발생한 경우에 이를 리셋하기 위한 출력입니다.  <br>
-  R1(에러 리셋) 동작이나 "에러/경보 신호 클리어" 신호가 입력되면 동작하는데 동작은 1초 동안 on되는 펄스 신호로 출력됩니다.<br>
-- 그 외 신호 : 로봇언어에서 신호출력으로 실러 제어반에 상태를 전달할 때 사용하십시오. <br>
-
+- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, depending on user settings or input signal states, the job program may run without performing actual discharge. This output indicates whether actual discharge is being performed. <br> 
+- Discharging: The monopump gun outputs whether it is currently discharging. <br>
+- Error reset: Output used to reset the sealer control panel in case of an error. R1 (error reset) operation or "Error/Alarm signal clear" input causes a 1-second ON pulse output for reset. <br>
+- Other signals: Use these to send sealer panel states via output signals in robot language. <br>

@@ -1,12 +1,11 @@
-﻿# 3.2.2 토출 종료 (m_seler off)
+# 3.2.2 Discharge stop (m_sealer off)
 
-m_sealer off명령문 수행시 석백 및 리필을 위한 동작 조건을 설정합니다. 석백은 토출이 끝난 후 잔량 제거를 위한 동작이며 리필은 석백이 끝나고 노즐에 실러를 충진하는 동작입니다. 
+When executing m_sealer off, set the conditions for suck-back and refill. Suck-back removes residual material after discharge, and refill fills the nozzle after suck-back.
 
 ![](../../_assets/image14.png)
 
-- 석백 토출비 : 석백 동작을 위한 토출비를 설정합니다.
-- 석백 시간 : 석백 동작 시간을 설정합니다.
-- 지연 시간 : 석백과 리필 사이에 대기 시간을 설정합니다.
-- 리필 토출비 : 리필을 위한 토출비를 설정합니다.
-- 리필 시간 : 리필 동작 시간을 설정합니다.
-
+- Suck-back flow rate: set the flow rate for suck-back.
+- Suck-back time: set the suck-back duration.
+- Delay time: set the wait time between suck-back and refill.
+- Refill flow rate: set the flow rate for refill.
+- Refill time: set the duration for refill.

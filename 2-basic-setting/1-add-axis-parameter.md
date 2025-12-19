@@ -1,14 +1,13 @@
-﻿# 2.1 부가축 파라미터 설정
+# 2.1 Additional axis parameter settings
 
-실러 건을 로봇의 부가축으로 직접 제어할 때는 축 사양을 <실러>로 설정합니다. 또한 모노펌프 건의 토출량(cc/s)은 해당 모터의 회전속도(rpm)에 따라 결정되기 때문에 해당 축의 속도를 제어해야 합니다. 이에 따라 축 구성을 <속도제어>로 설정합니다.
+When controlling the sealer gun directly as an additional axis of the robot, set the axis type to <Sealer>. Because the monopump gun's discharge amount (cc/s) is determined by the motor speed (rpm), you must control the axis speed. Therefore, set the axis configuration to <Speed control>.
 
 ![](../_assets/image1.png)
 
 
-- 감속기를 사용하지 않고 모터와 직결한다면 감속비를 360:1으로 설정합니다. 이는 모터 1회전에 실제 기구는 360deg 회전함을 의미합니다. 감속기가 존재한다면 해당 감속기의 감속비를 설정하고 또한 토출이 진행되는 방향을 고려하여 감속비 부호를 설정합니다. <br>
+- If the motor is directly coupled without a gearbox, set the reduction ratio to 360:1. This means one motor revolution corresponds to 360° of the mechanism. If a gearbox exists, set the gearbox reduction ratio and set the sign of the ratio according to the discharge direction. <br>
 
 ![](../_assets/image28.png)
 
-- 가감속 파라미터의 가속시간은 최고속에 도달하는 시간을 감속시간은 최고속에서 정지까지 시간을 결정하는 파라미터로 모노펌프건에서 이 설정값이 크면 토출 시작과 종료시, 석백과 리필 동작시 반응이 늦기 때문에 원하는 품질을 확보하기 어렵습니다.<br>
-따라서 가능한 범위에서 작게 설정하여 동작속도를 높여서 사용합니다.
-
+- The acceleration time parameter determines the time to reach maximum speed, and the deceleration time determines the time from maximum speed to stop. If these values are large for the monopump gun, the response for discharge start/stop and suck-back/refill will be delayed, making it difficult to achieve the desired quality. <br>
+Therefore, set these values as small as possible to increase operating speed.

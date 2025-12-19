@@ -1,20 +1,19 @@
-# 3.1.1 토출 시작 (m_seler on)
+# 3.1.1 Discharge start (m_sealer on)
 
-모노펌프 건의 토출을 시작하는 명령문으로 형식은 다음과 같으며 자동모드에서만 동작합니다.
+This command starts monopump gun discharge and operates only in automatic mode. The format is as follows.
 
-#### <mark style="color:green;">명령문 형식</mark>
+#### <mark style="color:green;">Command format</mark>
 ```
 m_sealer on,gun=1,cnd=1,flow=0.5,od=_,ot=_
 ```
 
-#### <mark style="color:green;">파라미터</mark>
+#### <mark style="color:green;">Parameters</mark>
 
-|파라미터| 설명                                                                                                    |    사용 예    |
+|Parameter| Description                                                                                                    |    Example    |
 | :---: | ------------------------------------------------------------------------------------------------------- | :-------: |
-| on   | <p>실러 조건(cnd)의 설정에 따라 해당 건의 토출을 시작(str)</p>   | "on" |
-| gun  | <p>토출을 시작할 모노펌프 건의 번호를 지정(int)</p>              |  1   |
-| cnd  | 토출을 위한 조건 번호(int)                                     | 1    |
-| flow   | <p>실러 조건(cnd)에 설정된 정속, 속도비례, 정액의 토출 모드 설정에 따라 하기와 같이 동작(double)</p><ul><li>정속 : 로봇의 속도에 무관하게 flow에 지정한 토출비(cc/s)로 토출</li><li>속도비례 : 로봇의 툴 끝 이동속도에 비례한 토출을 수행합니다. 로봇의 툴 끝 이동속도(mm/s)에 대한 토출비(cc/s)는 실러 조건에서 설정. (실러조건 참고) flow를 지정하지 않은 경우는 설정된 토출비의 1배로 토출되며 flow가 1.3으로 지정된 경우는 설정된 토출비의 1.3배로 출력</li><li>정액 : 지정된 토출량만 출력한 후 토출을 종료하며 이때 토출량은 실러 조건에서 설정(실러조건 참고) <br>  - od와 ot가 모두 기록되지 않은 경우 : 해당 명령문에서 지정된 토출량을 모두 토출한 후 off 조건에 대한 동작을 수행<br>  - od와 ot가 기록된 경우 : 이후의 명령문들을 수행하면서 지정된 토출량을 토출한 후 off 조건에 대한 동작을 수행</li></ul>                                         | 1.3 |
-| od  | 로봇이 목표위치 도달 전/후에 지정된 거리만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행(double)                                     | -0.5    |
-| ot  | 로봇이 목표위치 도달 전/후에 지정된 시간만큼 명령문의 실행을 조정하고자 할 때 사용하며 지정되지 않은 경우는 목표위치 도달(acc ok)후 바로 실행. 만약 od와 ot가 모두 기록된 경우 od를 우선으로 적용(double)                                     | -0.5    |
-
+| on   | <p>Starts discharge for the gun according to the sealer condition (cnd) (str)</p>   | "on" |
+| gun  | <p>Specifies the gun number to start discharge (int)</p>              |  1   |
+| cnd  | Condition number for discharge (int)                                     | 1    |
+| flow   | <p>Depending on the sealer condition's mode (constant, speed-proportional, fixed amount), behaves as follows (double)</p><ul><li>Constant: discharges at the rate (cc/s) specified by flow, regardless of robot speed</li><li>Speed-proportional: discharges proportionally to tool-tip speed. The cc/s per mm/s is configured in the sealer condition. If flow is not specified, uses the configured discharge rate; if flow is 1.3, outputs 1.3 times the configured rate</li><li>Fixed amount: discharges the specified amount and then stops; the amount is set in sealer condition (see sealer conditions) <br>  - If both od and ot are not specified: discharges the full amount specified in the command then performs off-condition actions<br>  - If od and ot are specified: performs subsequent commands while discharging the specified amount and then performs off-condition actions</li></ul>                                         | 1.3 |
+| od  | Use this to adjust command execution by a specified distance before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok) (double)                                     | -0.5    |
+| ot  | Use this to adjust command execution by a specified time before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok). If both od and ot are specified, od takes precedence (double)                                     | -0.5    |

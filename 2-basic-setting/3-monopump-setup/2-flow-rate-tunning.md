@@ -1,28 +1,26 @@
-﻿# 2.3.2 토출비 튜닝
+# 2.3.2 Flow rate tuning
 
-모노펌프 건의 모터 회전속도(rpm)에 따른 토출비(cc/s)를 설정합니다. 최대 6단계의 구간으로 나누어 설정이 가능하도록 구성되어 있습니다.<br>
-토출비는 지정 시간동안 지정 속도로 토출된 양을 저울에서 계측한 후 "계측값(g) * 비중 / 시간"의 계산값으로 설정합니다. 
+Set the discharge rate (cc/s) according to the monopump gun motor speed (rpm). It can be configured in up to 6 segments.<br>
+The flow rate is determined by measuring the amount discharged at a specified speed for a specified time on a scale and calculated as: "measured value (g) * specific gravity / time." 
 
 ![](../../_assets/image4.png)
 
 
-[수동 토출 시작] 버튼을 이용하여 해당 모노펌프 건의 모터를 지정된 속도로 설정된 시간동안만 구동할 수 있습니다.
+Use the [Start manual discharge] button to run the monopump gun motor at the specified speed for the set time.
 
 ![](../../_assets/image5.png)
 
 
-하기의 그림은 수동 도출 실행에 대한 진행 상태를 표시합니다.
+The following figure shows the status during manual discharge execution.
 
 ![](../../_assets/image6.png)
 
 
-[수동 토출 정지] 버튼을 이용하여 수동 토출 실행을 강제로 정지시킬 수 있습니다.
+Use the [Stop manual discharge] button to forcibly stop manual discharge.
 
 ![](../../_assets/image7.png)
 
 
-[초기화] 버튼을 이용하여 모터 1회전에 대한 토출량을 기준으로 토출비를 초기값으로 설정할 수 있습니다.
+Use the [Initialize] button to set the flow rate initial values based on the amount per one motor revolution.
 
 ![](../../_assets/image8.png)
-
-

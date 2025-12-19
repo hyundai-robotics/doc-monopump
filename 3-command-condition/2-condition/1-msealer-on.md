@@ -1,17 +1,17 @@
-﻿# 3.2.1 토출 시작 (m_seler on)
+# 3.2.1 Discharge start (m_sealer on)
 
-m_sealer on 명령을 수행할 때 토출 조건을 설정합니다.
+Set discharge conditions for the m_sealer on command.
 
 ![](../../_assets/image12.png)
 
-- 토출 모드 : 정속, 속도비례, 정액의 토출 모드를 선택합니다. 속도비례는 로봇의 툴 끝 이동속도에 따라 자동으로 토출비가 결정됩니다.
-- 토출량(정액 모드) : 토출 모드가 정액인 경우 토출량을 설정합니다.
-- <속도-토출비 테이블> : 토출 모드가 속도비례인 경우 로봇 툴 끝의 이동속도(mm/s)에 따른 토출비를 설정합니다. 최대 5단계의 구간으로 나누어 설정이 가능하도록 구성되어 있습니다. 설정하는 방법은 로봇 Lock을 유효로 설정한 상태에서 하기의 그림과 같이 m_sealer on ~ off 구간을 정속 모드로 실행하여 토출량을 확인합니다. 동일한 토출량이 되었을 때 해당 로봇속도에 따른 토출비를 설정합니다.
+- Discharge mode: select constant, speed-proportional, or fixed-amount discharge modes. Speed-proportional automatically determines flow according to tool-tip speed.
+- Discharge amount (fixed mode): set the discharge amount when fixed-amount mode is selected.
+- <Speed-Flow table>: For speed-proportional mode, set the flow by tool-tip speed (mm/s). It can be configured in up to 5 segments. To set it, enable robot Lock and run an m_sealer on~off region in constant mode to measure discharge, then set the flow corresponding to the robot speed when the same discharge amount is observed.
 
   ![](../../_assets/image13.png)
 
-  로봇의 속도가 낮은 구간에서 로봇 속도에 따른 토출비을 정비례 관계로 적용한다면 하기의 그림과 같이 토출 시작시 토출이 누락되는 현상이 발생합니다. <br>
+  If you apply a strictly proportional relationship between robot speed and flow at low speeds, discharge may be missed at the start as shown below. <br>
   ![](../../_assets/image26.png)
 
-  상기 토출 시작시 부족한 토출량을 보상하기 위해서는 하기의 그림과 같이 로봇의 속도가 0 ~ 50mm/s의 저속에서도 일정량 이상의 토출이 되도록 운용하는 것이 필요합니다. <br>
+  To compensate for insufficient discharge at the start, operate so that a certain minimum amount of discharge occurs even at low speeds of 0 ~ 50 mm/s as shown below. <br>
   ![](../../_assets/image24.png)

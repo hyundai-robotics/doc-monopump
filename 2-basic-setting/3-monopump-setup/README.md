@@ -1,2 +1,1 @@
-﻿# 2.3 모노펌프건 설정
-
+# 2.3 Monopump gun setup

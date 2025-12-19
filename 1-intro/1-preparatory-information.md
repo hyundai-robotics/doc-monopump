@@ -1,6 +1,6 @@
-﻿# 1.1 사전 필요 정보
+# 1.1 Preliminary information
 
-이 설명서를 이해하기 위해서는 다음과 같은 사전 정보가 필요합니다.
+To understand this manual, the following prior knowledge is required.
 
-1. **${cont_model} 로봇 제어기 조작 지식**
-2. **모노펌프 건의 동작 원리**
+1. **Knowledge of operating the ${cont_model} robot controller**
+2. **Understanding of the operation principle of a monopump gun**

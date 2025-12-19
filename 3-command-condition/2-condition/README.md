@@ -1,4 +1,3 @@
-﻿# 3.2 실러조건
+# 3.2 Sealer conditions
 
-실러조건은 m_sealer on이나 off 명령문에서 [속성]버튼에 의해 설정합니다. “+”버튼에 의한 조건의 추가, “-”버튼에 의한 조건의 삭제가 가능하며 현재 최대 8개의 조건을 지원합니다.  
-
+Sealer conditions are set via the [Properties] button in the m_sealer on/off commands. You can add conditions with the "+" button and remove them with the "-" button. Up to 8 conditions are currently supported.

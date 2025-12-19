@@ -1,4 +1,3 @@
-﻿# 3. 명령문과 실러조건
+# 3. Commands and sealer conditions
 
-실링 작업과 관련된 명령문과 실러조건 설정에 대해 설명합니다.
-
+Describes commands and sealer condition settings related to sealing operations.

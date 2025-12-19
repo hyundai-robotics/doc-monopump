@@ -1,24 +1,23 @@
-﻿# 2.3.3 입력 신호 할당
+# 2.3.3 Input signal assignment
 
-모노펌프 건과 관련하여 로봇제어기로 입력되는 신호에 대한 설정입니다.
+Settings for signals input to the robot controller related to the monopump gun.
 
 ![](../../_assets/image9.png)
 
-[자동할당] 버튼에 의하여 선택된 용접기 제조사에 따른 신호의 자동 설정이 가능합니다. <br>
+The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
     ![](../../_assets/image9_1.png)
 
-- 실러명령 실행방식 : 작업 프로그램에서 msealer on/off 명령문을 실행하여 토출을 수행합니다. 그런데 설정된 신호가 on 상태이면 실제 토출은 수행하지 않고 작업 프로그램을 실행할 수 있습니다. <br> 
-- 통신 상태 : 실러 제어반과의 통신 상태를 확인합니다. 실러 제어반은 해당 신호를 1초마다 on/off 반복하도록 제어하면 됩니다. <br>
-로봇 제어기는 해당 신호의 상태가 1초 이상 변경되지 않으면 "E6319 실링 장비 통신이상" 에러를 발생합니다. <br>
-- 그 외 신호 : 실러 제어반의 상태를 확인합니다. 로봇 제어기에서 해당 상태를 검지하여 에러나 경고를 발생하고자 할 때에는 사용자 정의 에러/경고 기능을 사용하십시오. <br>
+- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, if the configured signal is ON, the job program will run without performing actual discharge. <br> 
+- Communication status: Check communication status with the sealer control panel. The sealer control panel should toggle the signal ON/OFF every second. <br>
+The robot controller raises the error "E6319 Sealing equipment communication error" if the signal does not change state for more than 1 second. <br>
+- Other signals: Check the state of the sealer control panel. If you want the robot controller to detect these states and raise errors or warnings, use the user-defined error/warning function. <br>
 ![](../../_assets/image9_2.png)
 
-- 압력 센서 : 압력 센서 입력에 대한 정보를 설정합니다. <br>
-	- 사양(최소 ~ 최대) :압력 센서 사양의 최소값과 최대값을 설정합니다. <br>
-	- 통신(최소 ~ 최대) :압력 센서의 데이터가 통신으로 전달될 때 이에대한 최소값과 최대값을 설정합니다. <br>
-	- 신호 할당 :압력 센서에서 입력되는 신호를 설정합니다. <br>
-	- 할당된 비트 수 : 압력 센서에서 사용되는 신호의 비트수를 설정합니다. <br>
-	- 인터페이스 변수 : 계산된 압력값의 인터페이스를 위한 변수값을 설정합니다. 여기서는 현재 입력되는 압력으로 계산된 압력값이 _mf4의 메모리에 대입됩니다. <br>
+- Pressure sensor: Set information for pressure sensor input. <br>
+	- Spec (min ~ max): set the minimum and maximum specification values for the pressure sensor. <br>
+	- Communication (min ~ max): set the min and max values when the pressure sensor delivers data via communication. <br>
+	- Signal assignment: assign the input signal for the pressure sensor. <br>
+	- Assigned bit count: set the bit count used for the pressure sensor signal. <br>
+	- Interface variable: set the variable for interfacing the calculated pressure value. Here, the calculated pressure value from current input is assigned to _mf4 memory. <br>
 
        ![](../../_assets/image10.png)
-

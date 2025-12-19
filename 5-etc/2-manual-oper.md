@@ -1,21 +1,20 @@
-﻿# 5.2 수동 운전(R371)
+# 5.2 Manual operation (R371)
 
-[R371 : 실러 수동 운전]을 수행했을 때 표시되는 화면에서 모노펌프 건을 수동 운전할 수 있습니다.
+You can manually operate the monopump gun from the screen shown when performing [R371: Sealer manual operation].
 
-- 토출비 : 수동 운전을 위한 토출비를 설정합니다. <br>
-- 토출량 : 정량토출 동작시 토출량을 설정합니다. <br>
+- Flow rate: set the flow rate for manual operation. <br>
+- Discharge amount: set the discharge amount for fixed-amount discharge. <br>
 
 ![](../_assets/image20.png)
 ![](../_assets/image21.png)
 
-- 정속토출 <br>
- 설정된 토출비로 토출을 시작합니다. 토출을 정지하기 위해서는 [토출정지] 버튼을 별도로 수행하여야 합니다. <br>
-- 정량토출  <br>
- 설정된 토출비로 토출을 시작한 후 설정된 토출량에 도달하면 자동으로 토출을 정지합니다. [토출정지] 버튼으로 강제로 토출을 정지할 수 있습니다. <br>
-- 토출정지 <br>
- 토출을 정지하기 위해 사용합니다. <br>
+- Constant discharge <br>
+ Starts discharge at the set flow rate. Use the [Stop discharge] button to stop discharge. <br>
+- Fixed-amount discharge  <br>
+ Starts discharge at the set flow rate and automatically stops when the set amount is reached. You can forcibly stop discharge using the [Stop discharge] button. <br>
+- Stop discharge <br>
+ Use this to stop discharge. <br>
 
 {% hint style="info" %}
-토출 정지시에는 항상 [off] 탭에 설정된 석백과 리필 조건에 따른 동작이 수행됩니다.
+When stopping discharge, actions according to the suck-back and refill conditions set in the [off] tab are always performed.
 {% endhint %}
-

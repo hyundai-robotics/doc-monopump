@@ -1,5 +1,5 @@
-﻿# 5.3 라이선스키 등록
+# 5.3 License key registration
 
-본 기능을 사용하기 위해서는 “실링 옵션 기능”에 대한 라이선스키가 필요합니다. 당사에 문의하십시오.
+A license key for the "Sealing option feature" is required to use this function. Please contact us.
 
 ![](../_assets/image17.png)
