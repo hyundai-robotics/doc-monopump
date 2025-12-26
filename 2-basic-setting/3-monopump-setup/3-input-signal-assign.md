@@ -1,4 +1,4 @@
-# 2.3.3 Input signal assignment
+﻿# 2.3.3 Input signal assignment
 
 Settings for signals input to the robot controller related to the monopump gun.
 
@@ -9,7 +9,7 @@ The [Auto assign] button can automatically set signals based on the selected sea
 
 - Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, if the configured signal is ON, the job program will run without performing actual discharge. <br> 
 - Communication status: Check communication status with the sealer control panel. The sealer control panel should toggle the signal ON/OFF every second. <br>
-The robot controller raises the error "E6319 Sealing equipment communication error" if the signal does not change state for more than 1 second. <br>
+The robot controller raises the error "E6319 Sealing equipment communication error" if the signal does not change state for more than 2 second. <br>
 - Other signals: Check the state of the sealer control panel. If you want the robot controller to detect these states and raise errors or warnings, use the user-defined error/warning function. <br>
 ![](../../_assets/image9_2.png)
 
