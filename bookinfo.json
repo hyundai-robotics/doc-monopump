@@ -1,11 +1,12 @@
 {
     "langCode": "en",
-    "series": "Hyundai Robot Hi6 Controller",
-    "title": "Function Manual - Monopump",
+    "series": "${cont_model} Controller",
+    "title": "Function Manual - Monopump Sealer Gun",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Table of Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
-    "variables": {
-        "cont_model": "Hi6"
-    }
+    "docId": "${cont_model:upper}MONOPUMP_EN_001",
+    "references": [
+        { "rpath" : "doc-hi6-operation/en-tp630" }
+    ]
 }
