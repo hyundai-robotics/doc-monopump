@@ -1,6 +1,6 @@
 ﻿# Table of Contents
 
-* [${cont_model} 로봇제어기 기능설명서 - 모노펌프 실러건](README.md)
+* [${cont_model} 제어기 기능설명서 - 모노펌프 실러건](README.md)
 * [1. 개요](1-intro/README.md)
   * [1.1 사전 필요 정보](1-intro/1-preparatory-information.md)
   * [1.2 모노펌프 시스템](1-intro/2-monopump-func.md)
