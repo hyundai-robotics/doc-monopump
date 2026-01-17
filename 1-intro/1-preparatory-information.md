@@ -1,4 +1,4 @@
-# 1.1 Preliminary information
+﻿# 1.1 Preliminary information
 
 To understand this manual, the following prior knowledge is required.
 

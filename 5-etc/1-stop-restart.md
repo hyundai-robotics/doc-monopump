@@ -1,4 +1,4 @@
-# 5.1 Stop/Restart in sealer ON region
+﻿# 5.1 Stop/Restart in sealer ON region
 
 Explains monopump gun behavior when the robot stops/restarts in a sealer ON region.
 

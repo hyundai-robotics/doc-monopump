@@ -1,4 +1,4 @@
-# 5.5 Check discharge amount history
+﻿# 5.5 Check discharge amount history
 
 You can check the history of discharge amounts from recorded log files.
 

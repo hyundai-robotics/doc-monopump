@@ -1,6 +1,6 @@
-# Table of Contents
+﻿# Table of Contents
 
-* [${cont_model} Robot Controller Function Manual - Monopump Sealer Gun](README.md)
+* [${cont_model} Controller Function Manual - Monopump Sealer Gun](README.md)
 * [1. Overview](1-intro/README.md)
   * [1.1 Preliminary information](1-intro/1-preparatory-information.md)
   * [1.2 Monopump system](1-intro/2-monopump-func.md)

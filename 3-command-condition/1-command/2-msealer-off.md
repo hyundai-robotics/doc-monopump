@@ -1,4 +1,4 @@
-# 3.1.2 Discharge stop (m_sealer off)
+﻿# 3.1.2 Discharge stop (m_sealer off)
 
 This command stops monopump gun discharge. The format is as follows. <br>
 The off command works in manual mode as well. <br>

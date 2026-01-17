@@ -1,4 +1,4 @@
-# 3.2.3 Stop/restart
+﻿# 3.2.3 Stop/restart
 
 Set the conditions for suck-back and refill when the robot stops (stop or emergency stop) and restarts. <br>
 On stop, perform suck-back to prevent sealer clumping at the stop position. <br>

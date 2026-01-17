@@ -1,4 +1,4 @@
-# 4.1 Sealing status
+﻿# 4.1 Sealing status
 
 Describes the monitoring window for checking sealer status. Select Sealing Status in [Window Settings].
 

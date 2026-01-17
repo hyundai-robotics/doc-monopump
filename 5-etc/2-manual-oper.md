@@ -1,4 +1,4 @@
-# 5.2 Manual operation (R371)
+﻿# 5.2 Manual operation (R371)
 
 You can manually operate the monopump gun from the screen shown when performing [R371: Sealer manual operation].
 

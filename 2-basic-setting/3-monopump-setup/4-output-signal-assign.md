@@ -1,4 +1,4 @@
-# 2.3.4 Output signal assignment
+﻿# 2.3.4 Output signal assignment
 
 Settings for signals output from the robot controller related to the monopump gun.
 

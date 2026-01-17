@@ -1,4 +1,4 @@
-# 2.1 Additional axis parameter settings
+﻿# 2.1 Additional axis parameter settings
 
 When controlling the sealer gun directly as an additional axis of the robot, set the axis type to <Sealer>. Because the monopump gun's discharge amount (cc/s) is determined by the motor speed (rpm), you must control the axis speed. Therefore, set the axis configuration to <Speed control>.
 

@@ -1,4 +1,4 @@
-# 3.2.1 Discharge start (m_sealer on)
+﻿# 3.2.1 Discharge start (m_sealer on)
 
 Set discharge conditions for the m_sealer on command.
 

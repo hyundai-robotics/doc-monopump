@@ -1,4 +1,4 @@
-# 2.3.2 Flow rate tuning
+﻿# 2.3.2 Flow rate tuning
 
 Set the discharge rate (cc/s) according to the monopump gun motor speed (rpm). It can be configured in up to 6 segments.<br>
 The flow rate is determined by measuring the amount discharged at a specified speed for a specified time on a scale and calculated as: "measured value (g) * specific gravity / time." 

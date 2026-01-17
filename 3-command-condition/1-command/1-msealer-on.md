@@ -1,4 +1,4 @@
-# 3.1.1 Discharge start (m_sealer on)
+﻿# 3.1.1 Discharge start (m_sealer on)
 
 This command starts monopump gun discharge and operates only in automatic mode. The format is as follows.
 

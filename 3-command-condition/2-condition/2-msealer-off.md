@@ -1,4 +1,4 @@
-# 3.2.2 Discharge stop (m_sealer off)
+﻿# 3.2.2 Discharge stop (m_sealer off)
 
 When executing m_sealer off, set the conditions for suck-back and refill. Suck-back removes residual material after discharge, and refill fills the nozzle after suck-back.
 
