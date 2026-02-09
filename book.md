@@ -3,8 +3,7 @@
 # ${cont_model} Controller Function Manual - Monopump Sealer Gun
 
 [__SOURCE](1-intro/README.md)
-# 1. 개요
-
+# 1. Overview
 
 [__SOURCE](1-intro/1-preparatory-information.md)
 # 1.1 Preliminary information
@@ -29,7 +28,7 @@ To understand this manual, the following prior knowledge is required.
 
 ![](../_assets/image19.png)
 [__SOURCE](2-basic-setting/README.md)
-# 2. 기본 설정
+# 2. Basic settings
 
 
 [__SOURCE](2-basic-setting/1-add-axis-parameter.md)

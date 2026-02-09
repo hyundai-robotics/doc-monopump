@@ -1,2 +1,2 @@
-﻿# 2. 기본 설정
+﻿# 2. Basic settings
 
