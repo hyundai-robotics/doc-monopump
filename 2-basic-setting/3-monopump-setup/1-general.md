@@ -1,10 +1,10 @@
-﻿# 2.3.1 General
+﻿# 2.3.1 一般
 
-General settings related to the monopump gun.
+与单泵枪相关的一般设置。
 
 ![](../../_assets/image3.png)
 
-- Manufacturer: select the monopump gun manufacturer.
-- Discharge unit: choose the unit used for the discharge interface.
-- Specific gravity: set the specific gravity of the sealer material.
-- Sealer command execution mode: The m_sealer on/off commands in the job program execute discharge. If <Discharge off> is selected, the job program runs without performing actual discharge.
+- 制造商：选择单泵枪制造商。
+- 排放单元：选择用于排放接口的单元。
+- 比重：设定密封材料的比重。
+- 密封命令执行模式：作业程序中的 m_sealer 开/关命令执行排放。如果选择了 <排放关闭>，作业程序将在不执行实际排放的情况下运行。

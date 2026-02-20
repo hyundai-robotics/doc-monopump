@@ -1,11 +1,11 @@
-﻿# 3.2.2 Discharge stop (m_sealer off)
+﻿# 3.2.2 排放停止 (m_sealer 关闭)
 
-When executing m_sealer off, set the conditions for suck-back and refill. Suck-back removes residual material after discharge, and refill fills the nozzle after suck-back.
+执行 m_sealer 关闭时，设置回吸和补充的条件。回吸在排放后去除残留材料，补充则在回吸后填充喷嘴。
 
 ![](../../_assets/image14.png)
 
-- Suck-back flow rate: set the flow rate for suck-back.
-- Suck-back time: set the suck-back duration.
-- Delay time: set the wait time between suck-back and refill.
-- Refill flow rate: set the flow rate for refill.
-- Refill time: set the duration for refill.
+- 回吸流量：设置回吸的流量。
+- 回吸时间：设置回吸的持续时间。
+- 延迟时间：设置回吸和补充之间的等待时间。
+- 补充流量：设置补充的流量。
+- 补充时间：设置补充的持续时间。

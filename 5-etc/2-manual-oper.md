@@ -1,20 +1,20 @@
-﻿# 5.2 Manual operation (R371)
+﻿# 5.2 手动操作 (R371)
 
-You can manually operate the monopump gun from the screen shown when performing [R371: Sealer manual operation].
+您可以从执行 [R371: 密封剂手动操作] 时显示的屏幕手动操作单泵枪。
 
-- Flow rate: set the flow rate for manual operation. <br>
-- Discharge amount: set the discharge amount for fixed-amount discharge. <br>
+- 流量：设置手动操作的流量。 <br>
+- 放电量：设置固定放电的放电量。 <br>
 
 ![](../_assets/image20.png)
 ![](../_assets/image21.png)
 
-- Constant discharge <br>
- Starts discharge at the set flow rate. Use the [Stop discharge] button to stop discharge. <br>
-- Fixed-amount discharge  <br>
- Starts discharge at the set flow rate and automatically stops when the set amount is reached. You can forcibly stop discharge using the [Stop discharge] button. <br>
-- Stop discharge <br>
- Use this to stop discharge. <br>
+- 恒定放电 <br>
+以设置的流量开始放电。使用 [停止放电] 按钮停止放电。 <br>
+- 固定放电 <br>
+以设置的流量开始放电，当达到设置的放电量时自动停止。您可以使用 [停止放电] 按钮强行停止放电。 <br>
+- 停止放电 <br>
+使用此按钮停止放电。 <br>
 
 {% hint style="info" %}
-When stopping discharge, actions according to the suck-back and refill conditions set in the [off] tab are always performed.
+停止放电时，将始终根据 [关闭] 选项卡中设置的回吸和补充条件执行操作。
 {% endhint %}

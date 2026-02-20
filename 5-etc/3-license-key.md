@@ -1,5 +1,5 @@
-﻿# 5.3 License key registration
+﻿# 5.3 许可证密钥注册
 
-A license key for the "Sealing option feature" is required to use this function. Please contact us.
+使用“密封选项功能”需要许可证密钥。请与我们联系。
 
 ![](../_assets/image17.png)

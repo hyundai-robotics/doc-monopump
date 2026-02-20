@@ -1,2 +1,1 @@
-﻿# 2. Basic settings
-
+﻿# 2. 基本设置

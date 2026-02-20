@@ -1,13 +1,13 @@
-﻿# 5.6 Job program composition
+﻿# 5.6 作业程序组成
 
-A job program layout to better match the start and stop timing of discharge when using a monopump gun. <br>
+作业程序布局以更好地匹配使用单泵枪时放电的开始和停止时机。 <br>
 
-If you use a commonly used job layout, the start/stop points often miss or the discharged amount may be insufficient, as shown below. <br>
+如果使用常用的作业布局，开始/停止点通常会错过，或放电量可能不足，如下所示。 <br>
 
 ![](../_assets/image27.png)
 
-As a method to compensate for the above phenomenon, record the step before and after discharge at the same position, set accu to 0 for the post-discharge step and set accu to 1 for the pre-discharge step. Then use ot or od in the m_sealer on command to adjust the timing of command execution.
+作为补偿上述现象的方法，在放电前后记录相同位置的步骤，将放电后步骤的 accu 设置为 0，将放电前步骤的 accu 设置为 1。然后在 m_sealer 上命令中使用 ot 或 od 来调整命令执行的时机。
 
 ![](../_assets/image25.png)
 
-Use the same method to structure commands at the discharge stop point.
+使用相同的方法在放电停止点构造命令。

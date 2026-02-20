@@ -1,13 +1,13 @@
-﻿# 4.1 Sealing status
+﻿# 4.1 密封状态
 
-Describes the monitoring window for checking sealer status. Select Sealing Status in [Window Settings].
+描述用于检查密封器状态的监控窗口。在[窗口设置]中选择密封状态。
 
 ![](../_assets/image15.png)
 
 ![](../_assets/image16.png)
 
-- Flow rate: shows the current discharge flow rate.
-- RPM command: RPM command corresponding to the flow rate.
-- RPM actual: shows the current RPM of the sealer motor.
-- Pressure: shows the pressure value from the pressure sensor.
-- Discharged amount: shows the amount measured since discharge start.
+- 流量：显示当前的放电流量。
+- RPM命令：与流量对应的RPM命令。
+- 实际RPM：显示密封器电机的当前RPM。
+- 压力：显示来自压力传感器的压力值。
+- 放电量：显示自放电开始以来测量的量。
