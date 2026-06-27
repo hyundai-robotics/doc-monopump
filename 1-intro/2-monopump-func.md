@@ -1,14 +1,14 @@
-﻿# 1.2 Monopump system
+# 1.2 单泵系统
 
 
-### <mark style="color:green;">1. Complete system configuration </mark>
+### <mark style="color:green;">1. 完整系统配置</mark>
 
-    The following figure shows the overall system configuration. The monopump gun can be directly controlled by the robot controller.
+    以下图显示了整体系统配置。单泵枪可以由机器人控制器直接控制。
 
 ![](../_assets/image18.png)
 
-### <mark style="color:green;">2. Monopump gun components</mark>
+### <mark style="color:green;">2. 单泵枪组件</mark>
 
-    The following figure shows the composition of the monopump gun. It consists of a servo motor, rotor, and stator.
+    以下图显示了单泵枪的组成。它由伺服电机、转子和定子组成。
 
 ![](../_assets/image19.png)

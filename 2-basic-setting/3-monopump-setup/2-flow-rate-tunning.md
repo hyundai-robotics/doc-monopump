@@ -1,26 +1,22 @@
-﻿# 2.3.2 Flow rate tuning
+﻿# 2.3.2 流量调节
 
-Set the discharge rate (cc/s) according to the monopump gun motor speed (rpm). It can be configured in up to 6 segments.<br>
-The flow rate is determined by measuring the amount discharged at a specified speed for a specified time on a scale and calculated as: "measured value (g) * specific gravity / time." 
+根据单泵枪电机速度 (rpm) 设置排放速率 (cc/s)。它可以配置为最多 6 个段。<br>
+流量是通过在指定速度下在天平上测量指定时间排放的量来确定的，计算公式为：“测量值 (g) * 比重 / 时间。”
 
 ![](../../_assets/image4.png)
 
-
-Use the [Start manual discharge] button to run the monopump gun motor at the specified speed for the set time.
+使用 [开始手动排放] 按钮以指定速度运行单泵枪电机，持续设定时间。
 
 ![](../../_assets/image5.png)
 
-
-The following figure shows the status during manual discharge execution.
+下图显示了手动排放执行期间的状态。
 
 ![](../../_assets/image6.png)
 
-
-Use the [Stop manual discharge] button to forcibly stop manual discharge.
+使用 [停止手动排放] 按钮强制停止手动排放。
 
 ![](../../_assets/image7.png)
 
-
-Use the [Initialize] button to set the flow rate initial values based on the amount per one motor revolution.
+使用 [初始化] 按钮根据每次电机转动的排放量设置流量初始值。
 
 ![](../../_assets/image8.png)

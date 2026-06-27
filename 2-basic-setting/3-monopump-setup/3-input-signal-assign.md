@@ -1,23 +1,23 @@
-﻿# 2.3.3 Input signal assignment
+# 2.3.3 输入信号分配
 
-Settings for signals input to the robot controller related to the monopump gun.
+与单泵枪相关的输入信号设置到机器人控制器。
 
 ![](../../_assets/image9.png)
 
-The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
+[Auto assign] 按钮可以根据选择的密封剂制造商自动设置信号。 <br>
     ![](../../_assets/image9_1.png)
 
-- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, if the configured signal is ON, the job program will run without performing actual discharge. <br> 
-- Communication status: Check communication status with the sealer control panel. The sealer control panel should toggle the signal ON/OFF every second. <br>
-The robot controller raises the error "E6319 Sealing equipment communication error" if the signal does not change state for more than 2 second. <br>
-- Other signals: Check the state of the sealer control panel. If you want the robot controller to detect these states and raise errors or warnings, use the user-defined error/warning function. <br>
+- 密封命令执行模式：作业程序中的 m_sealer 开/关命令执行放电。然而，如果配置的信号为 ON，作业程序将在不执行实际放电的情况下运行。 <br> 
+- 通信状态：检查与密封控制面板的通信状态。密封控制面板应每秒切换信号 ON/OFF。 <br>
+如果信号超过 2 秒未改变状态，机器人控制器将报错 "E6319 密封设备通信错误"。 <br>
+- 其他信号：检查密封控制面板的状态。如果希望机器人控制器检测这些状态并引发错误或警告，请使用用户定义的错误/警告功能。 <br>
 ![](../../_assets/image9_2.png)
 
-- Pressure sensor: Set information for pressure sensor input. <br>
-	- Spec (min ~ max): set the minimum and maximum specification values for the pressure sensor. <br>
-	- Communication (min ~ max): set the min and max values when the pressure sensor delivers data via communication. <br>
-	- Signal assignment: assign the input signal for the pressure sensor. <br>
-	- Assigned bit count: set the bit count used for the pressure sensor signal. <br>
-	- Interface variable: set the variable for interfacing the calculated pressure value. Here, the calculated pressure value from current input is assigned to _mf4 memory. <br>
+- 压力传感器：设置压力传感器输入的信息。 <br>
+	- 规格（最小 ~ 最大）：设置压力传感器的最小和最大规格值。 <br>
+	- 通信（最小 ~ 最大）：设置压力传感器通过通信传送数据时的最小和最大值。 <br>
+	- 信号分配：分配压力传感器的输入信号。 <br>
+	- 分配的位数：设置用于压力传感器信号的位数。 <br>
+	- 接口变量：设置用于接口计算压力值的变量。在这里，当前输入的计算压力值分配给 _mf4 内存。 <br>
 
        ![](../../_assets/image10.png)

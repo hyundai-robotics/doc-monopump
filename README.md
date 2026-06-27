@@ -1,1 +1,1 @@
-﻿# ${cont_model} Controller Function Manual - Monopump Sealer Gun
+﻿# ${cont_model} 控制器功能手册 - 单泵封闭枪

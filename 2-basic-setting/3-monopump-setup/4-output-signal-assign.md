@@ -1,13 +1,13 @@
-﻿# 2.3.4 Output signal assignment
+# 2.3.4 输出信号分配
 
-Settings for signals output from the robot controller related to the monopump gun.
+与单泵枪相关的来自机器人控制器的信号输出设置。
 
 ![](../../_assets/image10_5.png)
 
-The [Auto assign] button can automatically set signals based on the selected sealer manufacturer. <br>
+[Auto assign] 按钮可以根据选择的封口机制造商自动设置信号。 <br>
 ![](../../_assets/image9_1.png)
 
-- Sealer command execution mode: The m_sealer on/off commands in the job program perform discharge. However, depending on user settings or input signal states, the job program may run without performing actual discharge. This output indicates whether actual discharge is being performed. <br> 
-- Discharging: The monopump gun outputs whether it is currently discharging. <br>
-- Error reset: Output used to reset the sealer control panel in case of an error. R1 (error reset) operation or "Error/Alarm signal clear" input causes a 1-second ON pulse output for reset. <br>
-- Other signals: Use these to send sealer panel states via output signals in robot language. <br>
+- 封口机命令执行模式：作业程序中的 m_sealer 开/关命令执行放电。然而，根据用户设置或输入信号状态，作业程序可能在不执行实际放电的情况下运行。此输出指示是否正在执行实际放电。 <br> 
+- 放电：单泵枪输出其当前是否正在放电。 <br>
+- 错误重置：在发生错误时用于重置封口机控制面板的输出。R1（错误重置）操作或“错误/警报信号清除”输入会导致 1 秒的 ON 脉冲输出以进行重置。 <br>
+- 其他信号：使用这些信号通过机器人语言发送封口机面板状态。 <br>

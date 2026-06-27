@@ -1,17 +1,17 @@
-﻿# 3.2.1 Discharge start (m_sealer on)
+# 3.2.1 排放开始 (m_sealer 开启)
 
-Set discharge conditions for the m_sealer on command.
+设置 m_sealer 开启命令的排放条件。
 
 ![](../../_assets/image12.png)
 
-- Discharge mode: select constant, speed-proportional, or fixed-amount discharge modes. Speed-proportional automatically determines flow according to tool-tip speed.
-- Discharge amount (fixed mode): set the discharge amount when fixed-amount mode is selected.
-- <Speed-Flow table>: For speed-proportional mode, set the flow by tool-tip speed (mm/s). It can be configured in up to 5 segments. To set it, enable robot Lock and run an m_sealer on~off region in constant mode to measure discharge, then set the flow corresponding to the robot speed when the same discharge amount is observed.
+- 排放模式：选择恒定、速度比例或固定量排放模式。速度比例模式根据工具尖速度自动确定流量。
+- 排放量（固定模式）：在选择固定量模式时设置排放量。
+- <速度-流量表>: 对于速度比例模式，按工具尖速度 (mm/s) 设置流量。最多可配置 5 个段。要设置它，请启用机器人锁并在恒定模式下运行 m_sealer 开启~关闭区域进行排放测量，然后在观察到相同排放量时设置与机器人速度对应的流量。
 
   ![](../../_assets/image13.png)
 
-  If you apply a strictly proportional relationship between robot speed and flow at low speeds, discharge may be missed at the start as shown below. <br>
+  如果在低速下对机器人速度和流量应用严格的比例关系，排放在开始时可能会漏掉，如下所示。 <br>
   ![](../../_assets/image26.png)
 
-  To compensate for insufficient discharge at the start, operate so that a certain minimum amount of discharge occurs even at low speeds of 0 ~ 50 mm/s as shown below. <br>
+  为补偿起始时排放不足，操作时应确保即使在 0 ~ 50 mm/s 的低速下也发生一定的最小排放量，如下所示。 <br>
   ![](../../_assets/image24.png)

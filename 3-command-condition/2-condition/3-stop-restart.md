@@ -1,15 +1,15 @@
-﻿# 3.2.3 Stop/restart
+﻿# 3.2.3 停止/重新启动
 
-Set the conditions for suck-back and refill when the robot stops (stop or emergency stop) and restarts. <br>
-On stop, perform suck-back to prevent sealer clumping at the stop position. <br>
-On restart, the robot starts moving after refill to prevent missed discharge. 
+设置机器人停止（停止或紧急停止）和重新启动时的回吸和补充的条件。 <br>
+在停止时，执行回吸以防止在停止位置密封剂聚集。 <br>
+在重新启动时，机器人在补充后开始移动，以防止漏放。
 
 ![](../../_assets/image29.png)
 
 <Stop>
-- Suck-back flow rate: set the flow rate for suck-back.
-- Suck-back time: set the suck-back duration.
+- 回吸流量: 设置回吸的流量。
+- 回吸时间: 设置回吸的持续时间。
 
 <Restart>
-- Refill flow rate: set the refill flow rate.
-- Refill time: set the refill duration.
+- 补充流量: 设置补充的流量。
+- 补充时间: 设置补充的持续时间。

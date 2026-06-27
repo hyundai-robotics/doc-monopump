@@ -1,19 +1,19 @@
-﻿# 3.1.1 Discharge start (m_sealer on)
+﻿# 3.1.1 放电启动 (m_sealer 开)
 
-This command starts monopump gun discharge and operates only in automatic mode. The format is as follows.
+此命令启动单泵枪放电，并仅在自动模式下操作。格式如下。
 
-#### <mark style="color:green;">Command format</mark>
+#### <mark style="color:green;">命令格式</mark>
 ```
 m_sealer on,gun=1,cnd=1,flow=0.5,od=_,ot=_
 ```
 
-#### <mark style="color:green;">Parameters</mark>
+#### <mark style="color:green;">参数</mark>
 
-|Parameter| Description                                                                                                    |    Example    |
+|参数| 描述                                                                                                    |    示例    |
 | :---: | ------------------------------------------------------------------------------------------------------- | :-------: |
-| on   | <p>Starts discharge for the gun according to the sealer condition (cnd) (str)</p>   | "on" |
-| gun  | <p>Specifies the gun number to start discharge (int)</p>              |  1   |
-| cnd  | Condition number for discharge (int)                                     | 1    |
-| flow   | <p>Depending on the sealer condition's mode (constant, speed-proportional, fixed amount), behaves as follows (double)</p><ul><li>Constant: discharges at the rate (cc/s) specified by flow, regardless of robot speed</li><li>Speed-proportional: discharges proportionally to tool-tip speed. The cc/s per mm/s is configured in the sealer condition. If flow is not specified, uses the configured discharge rate; if flow is 1.3, outputs 1.3 times the configured rate</li><li>Fixed amount: discharges the specified amount and then stops; the amount is set in sealer condition (see sealer conditions) <br>  - If both od and ot are not specified: discharges the full amount specified in the command then performs off-condition actions<br>  - If od and ot are specified: performs subsequent commands while discharging the specified amount and then performs off-condition actions</li></ul>                                         | 1.3 |
-| od  | Use this to adjust command execution by a specified distance before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok) (double)                                     | -0.5    |
-| ot  | Use this to adjust command execution by a specified time before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok). If both od and ot are specified, od takes precedence (double)                                     | -0.5    |
+| on   | <p>根据密封条件 (cnd) 启动枪的放电 (str)</p>   | "on" |
+| gun  | <p>指定要启动放电的枪号 (int)</p>              |  1   |
+| cnd  | 放电条件编号 (int)                                     | 1    |
+| flow   | <p>根据密封条件的模式 (恒定、速度比例、固定量) 表现如下 (double)</p><ul><li>恒定: 以 flow 指定的速率 (cc/s) 放电，无论机器人速度如何</li><li>速度比例: 与工具尖端速度成比例放电。每 mm/s 的 cc/s 在密封条件中配置。如果未指定 flow，则使用配置的放电速率；如果 flow 是 1.3，则输出 1.3 倍的配置速率</li><li>固定量: 放电指定数量后停止；数量在密封条件中设置 (见密封条件) <br>  - 如果 od 和 ot 均未指定: 放电命令中指定的全部量，然后执行离开条件操作<br>  - 如果 od 和 ot 被指定: 在放电指定数量的同时执行后续命令，然后执行离开条件操作</li></ul>                                         | 1.3 |
+| od  | 用于在机器人到达目标位置之前/之后调整命令执行的指定距离；如果未指定，则在到达目标后立即执行 (acc ok) (double)                                     | -0.5    |
+| ot  | 用于在机器人到达目标位置之前/之后调整命令执行的指定时间；如果未指定，则在到达目标后立即执行 (acc ok)。如果同时指定 od 和 ot，则以 od 为先 (double)                                     | -0.5    |

@@ -1,3 +1,3 @@
-﻿# 3.2 Sealer conditions
+﻿# 3.2 封闭剂条件
 
-Sealer conditions are set via the [Properties] button in the m_sealer on/off commands. You can add conditions with the "+" button and remove them with the "-" button. Up to 8 conditions are currently supported.
+封闭剂条件通过 m_sealer 的 [Properties] 按钮进行设置。您可以使用 "+" 按钮添加条件，使用 "-" 按钮删除条件。目前支持最多 8 个条件。

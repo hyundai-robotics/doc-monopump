@@ -1,13 +1,12 @@
-﻿# 2.1 Additional axis parameter settings
+﻿# 2.1 附加轴参数设置
 
-When controlling the sealer gun directly as an additional axis of the robot, set the axis type to <Sealer>. Because the monopump gun's discharge amount (cc/s) is determined by the motor speed (rpm), you must control the axis speed. Therefore, set the axis configuration to <Speed control>.
+当直接控制封口枪作为机器人的附加轴时，将轴类型设置为 <Sealer>。由于单泵枪的排放量 (cc/s) 是由电机转速 (rpm) 决定的，因此必须控制轴速度。因此，将轴配置设置为 <Speed control>。
 
 ![](../_assets/image1.png)
 
-
-- If the motor is directly coupled without a gearbox, set the reduction ratio to 360:1. This means one motor revolution corresponds to 360° of the mechanism. If a gearbox exists, set the gearbox reduction ratio and set the sign of the ratio according to the discharge direction. <br>
+- 如果电机是直接耦合而没有减速器，请将减速比设置为 360:1。这意味着一圈电机转动对应于机制的 360°。如果存在减速器，请设置减速器减速比，并根据排放方向设置比率的符号。 <br>
 
 ![](../_assets/image28.png)
 
-- The acceleration time parameter determines the time to reach maximum speed, and the deceleration time determines the time from maximum speed to stop. If these values are large for the monopump gun, the response for discharge start/stop and suck-back/refill will be delayed, making it difficult to achieve the desired quality. <br>
-Therefore, set these values as small as possible to increase operating speed.
+- 加速度时间参数决定达到最大速度所需的时间，而减速度时间决定从最大速度到停止所需的时间。如果这些值对单泵枪来说很大，排放的开始/停止和回吸/补充的响应将会延迟，从而使实现所需的质量变得困难。 <br>
+因此，请将这些值设置得尽可能小，以提高操作速度。

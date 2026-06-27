@@ -1,19 +1,19 @@
-﻿# 3.1.2 Discharge stop (m_sealer off)
+# 3.1.2 放料停止 (m_sealer off)
 
-This command stops monopump gun discharge. The format is as follows. <br>
-The off command works in manual mode as well. <br>
+此命令停止单泵枪放料。格式如下。 <br>
+关闭命令在手动模式下也有效。 <br>
 
-#### <mark style="color:green;">Command format</mark>
+#### <mark style="color:green;">命令格式</mark>
 ```
 m_sealer off,gun=1,cnd=1,od=_,ot=_
 ```
 
-#### <mark style="color:green;">Parameters</mark>
+#### <mark style="color:green;">参数</mark>
 
-|Parameter| Description                                                                                                    |    Example    |
+|参数| 描述                                                                                                    |    示例    |
 | :---: | ------------------------------------------------------------------------------------------------------- | :-------: |
-| off   | <p>Stops discharge for the gun according to the sealer condition (cnd) (str)</p>      | "off" |
-| gun  | <p>Specifies the gun number to stop discharge (int)</p>                  |  1   |
-| cnd  | Condition number for stopping discharge (int). When stopping, suck-back is performed first, followed by refill. The suck-back flow rate (cc/s) and time and the refill flow rate (cc/s) and time are set in the sealer condition (see sealer conditions) (int)                                          | 1    |
-| od  | Use this to adjust command execution by a specified distance before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok) (double)                                     | -0.5    |
-| ot  | Use this to adjust command execution by a specified time before/after the robot reaches the target position; if not specified, executes immediately after target is reached (acc ok). If both od and ot are specified, od takes precedence (double)                                     | -0.5    |
+| off   | <p>根据封口机条件 (cnd) 停止枪的放料 (str)</p>      | "off" |
+| gun  | <p>指定要停止放料的枪编号 (int)</p>                  |  1   |
+| cnd  | 停止放料的条件编号 (int)。停止时，首先进行回吸，然后再补充。回吸流量 (cc/s) 和时间以及补充流量 (cc/s) 和时间在封口机条件中设置 (见封口机条件) (int)                                          | 1    |
+| od  | 用于在机器人到达目标位置之前/之后按指定距离调整命令执行；如果未指定，则在到达目标后立即执行 (acc ok) (double)                                     | -0.5    |
+| ot  | 用于在机器人到达目标位置之前/之后按指定时间调整命令执行；如果未指定，则在到达目标后立即执行 (acc ok)。如果同时指定了 od 和 ot，则优先执行 od (double)                                     | -0.5    |

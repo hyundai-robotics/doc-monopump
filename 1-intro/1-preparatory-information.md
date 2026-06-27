@@ -1,6 +1,6 @@
-﻿# 1.1 Preliminary information
+﻿# 1.1 初步信息
 
-To understand this manual, the following prior knowledge is required.
+要理解本手册，需要以下先决知识。
 
-1. **Knowledge of operating the ${cont_model} robot controller**
-2. **Understanding of the operation principle of a monopump gun**
+1. **操作 ${cont_model} 机器人控制器的知识**
+2. **单泵枪的操作原理理解**
